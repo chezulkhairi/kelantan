@@ -337,7 +337,7 @@ function initMap() {
 	
 	//var floodmap = L.KML("DelaunayPusatPemindahan.kml", {async: true});
 
-
+	var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer);
 	var standard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors</a>'
