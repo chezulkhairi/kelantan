@@ -584,7 +584,7 @@ function initMap() {
         return true;
     }
 });
-	var floodmap = omnivore.kml('MalaysiaFlood2018.kml', null, customLayer);
+	var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer);
 	map.addLayer(floodmap);
 	//
 	
