@@ -335,7 +335,7 @@ function loadGeoJsonString(geoString) {
  */
 function initMap() {
 	
-	var floodmap = new L.KML("DelaunayPusatPemindahan.kml", {async: true});
+	var floodmap = L.KML("DelaunayPusatPemindahan.kml", {async: true});
 
 
 	var standard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
