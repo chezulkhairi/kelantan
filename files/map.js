@@ -577,16 +577,7 @@ function initMap() {
 		vertical: false
 	}));
 	
-	//
-	var customLayer = L.geoJson(null, {
-    filter: function() {
-        // my custom filter function
-        return true;
-    }
-});
-	var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer);
-	map.addLayer(floodmap);
-	//
+	
 	
 	
 	//var customLayer = L.geoJson(null, {
@@ -646,6 +637,18 @@ function initMap() {
 	//var omni = omnivore.kml('DelaunayPusatPemindahan.kml').addTo(map);
 	var layerControl = L.control.layers(baseMaps, overlayMaps, {collapsed: false}).addTo(map);
 	map.addControl(new L.Control.Permalink({layers: layerControl, useAnchor: false, position: 'bottomright'}));
+	
+	//
+	var customLayer = L.geoJson(null, {
+    filter: function() {
+        // my custom filter function
+        return true;
+    }
+});
+	var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer);
+	map.addLayer(floodmap);
+	//
+	
 	// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
 $.getJSON("countours.geojson",function(data){
 // L.geoJson function is used to parse geojson file and load on to map
