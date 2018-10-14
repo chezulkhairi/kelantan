@@ -15,6 +15,11 @@ var map;
  * @param String paramVal the value of the parameter
  * @return String the changed URL
  */
+
+
+
+
+
 function updateURLParameter(url, param, paramVal) {
 	var theAnchor = null;
 	var newAdditionalURL = "";
@@ -224,6 +229,107 @@ function toggleWheel(localLang) {
 	}
 }
 
+
+function loadGeoJsonString(geoString) {
+        var geojson = JSON.parse(geoString);
+        map.data.addGeoJson(geojson);
+        zoom(map);
+      }
+
+      /**
+       * Update a map's viewport to fit each geometry in a dataset
+       * @param {google.maps.Map} map The map to adjust
+       */
+      function zoom(map) {
+        var bounds = new google.maps.LatLngBounds();
+        map.data.forEach(function(feature) {
+          processPoints(feature.getGeometry(), bounds.extend, bounds);
+        });
+        map.fitBounds(bounds);
+      }
+
+      /**
+       * Process each point in a Geometry, regardless of how deep the points may lie.
+       * @param {google.maps.Data.Geometry} geometry The structure to process
+       * @param {function(google.maps.LatLng)} callback A function to call on each
+       *     LatLng point encountered (e.g. Array.push)
+       * @param {Object} thisArg The value of 'this' as provided to 'callback' (e.g.
+       *     myArray)
+       */
+      function processPoints(geometry, callback, thisArg) {
+        if (geometry instanceof google.maps.LatLng) {
+          callback.call(thisArg, geometry);
+        } else if (geometry instanceof google.maps.Data.Point) {
+          callback.call(thisArg, geometry.get());
+        } else {
+          geometry.getArray().forEach(function(g) {
+            processPoints(g, callback, thisArg);
+          });
+        }
+      }
+
+
+      /* DOM (drag/drop) functions */
+
+      function initEvents() {
+        // set up the drag & drop events
+        var mapContainer = document.getElementById('map');
+        var dropContainer = document.getElementById('drop-container');
+
+        // map-specific events
+        mapContainer.addEventListener('dragenter', showPanel, false);
+
+        // overlay specific events (since it only appears once drag starts)
+        dropContainer.addEventListener('dragover', showPanel, false);
+        dropContainer.addEventListener('drop', handleDrop, false);
+        dropContainer.addEventListener('dragleave', hidePanel, false);
+      }
+
+      function showPanel(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        document.getElementById('drop-container').style.display = 'block';
+        return false;
+      }
+
+      function hidePanel(e) {
+        document.getElementById('drop-container').style.display = 'none';
+      }
+
+      function handleDrop(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        hidePanel(e);
+
+        var files = e.dataTransfer.files;
+        if (files.length) {
+          // process file(s) being dropped
+          // grab the file data from each file
+          for (var i = 0, file; file = files[i]; i++) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              loadGeoJsonString(e.target.result);
+            };
+            reader.onerror = function(e) {
+              console.error('reading failed');
+            };
+            reader.readAsText(file);
+          }
+        } else {
+          // process non-file (e.g. text or html) content being dropped
+          // grab the plain text version of the data
+          var plainText = e.dataTransfer.getData('text/plain');
+          if (plainText) {
+            loadGeoJsonString(plainText);
+          }
+        }
+
+        // prevent drag event from bubbling further
+        return false;
+      }
+
+
+
 /**
  * Initialize the map.
  */
@@ -399,7 +505,7 @@ function initMap() {
 	maxZoom: 19,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
-
+	
 	// Get your own free OWM API key at https://www.openweathermap.org/appid - please do not re-use mine!
 	// You don't need an API key for this to work at the moment, but this will change eventually.
 	var OWM_API_KEY = '06aac0fd4ba239a20d824ef89602f311';
@@ -410,7 +516,7 @@ function initMap() {
 	var precipitationcls = L.OWM.precipitationClassic({opacity: 0.5, appId: OWM_API_KEY});
 	var rain = L.OWM.rain({opacity: 0.5, appId: OWM_API_KEY});
 	var raincls = L.OWM.rainClassic({opacity: 0.5, appId: OWM_API_KEY});
-	//var snow = L.OWM.snow({opacity: 0.5, appId: OWM_API_KEY});
+	var snow = L.OWM.snow({opacity: 0.5, appId: OWM_API_KEY});
 	var pressure = L.OWM.pressure({opacity: 0.4, appId: OWM_API_KEY});
 	var pressurecntr = L.OWM.pressureContour({opacity: 0.5, appId: OWM_API_KEY});
 	var temp = L.OWM.temperature({opacity: 0.5, appId: OWM_API_KEY});
@@ -426,7 +532,7 @@ function initMap() {
 	windrose.on('owmlayeradd', windroseAdded, windrose); // Add an event listener to get informed when windrose layer is ready
 
 	var useGeolocation = true;
-	var zoom = 6;
+	var zoom = 10;
 	var lat = 2.7465;
 	var lon = 101.44724;
 	var urlParams = getUrlParameters();
@@ -461,7 +567,7 @@ function initMap() {
 		vertical: false
 	}));
 
-var baseMaps = {
+	var baseMaps = {
 		"OSM Standard": standard
 		, "OSM Humanitarian": humanitarian
 		, "ESRI Aerial": esri
@@ -509,6 +615,12 @@ var baseMaps = {
 
 	var layerControl = L.control.layers(baseMaps, overlayMaps, {collapsed: false}).addTo(map);
 	map.addControl(new L.Control.Permalink({layers: layerControl, useAnchor: false, position: 'bottomright'}));
+	
+	// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
+$.getJSON("countours.geojson",function(data){
+// L.geoJson function is used to parse geojson file and load on to map
+L.geoJson(data).addTo(map);
+});
 
 	// patch layerControl to add some titles
 	var patch = L.DomUtil.create('div', 'owm-layercontrol-header');
@@ -535,4 +647,5 @@ var baseMaps = {
 	if (useGeolocation && typeof navigator.geolocation != "undefined") {
 		navigator.geolocation.getCurrentPosition(foundLocation);
 	}
+	//initEvents();
 }
