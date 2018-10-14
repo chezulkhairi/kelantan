@@ -341,7 +341,11 @@ function initMap() {
         return true;
     }
 });
-	var floodmap = omnivore.kml('MalaysiaFlood2018.kml', null, customLayer);
+	var floodmap = omnivore.kml('MalaysiaFlood2018.kml', null, customLayer),
+	    standard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors</a>'
+		});
 	
 	//var floodmap = L.KML("DelaunayPusatPemindahan.kml", {async: true});
 
