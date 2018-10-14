@@ -623,7 +623,7 @@ var customLayer = L.geoJson(null, {
 	overlayMaps[getI18n('city', localLang) + " (min Zoom 5)"] = city;
 	overlayMaps[getI18n('windrose', localLang)] = windrose;
 
-	var layerControl = L.control.layers(baseMaps, overlayMaps, {collapsed: false}).addTo(map);
+	var layerControl = L.control.layers(floodmap,baseMaps, overlayMaps, {collapsed: false}).addTo(map);
 	map.addControl(new L.Control.Permalink({layers: layerControl, useAnchor: false, position: 'bottomright'}));
 	
 	// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
