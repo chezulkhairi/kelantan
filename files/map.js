@@ -410,7 +410,7 @@ function initMap() {
 	var precipitationcls = L.OWM.precipitationClassic({opacity: 0.5, appId: OWM_API_KEY});
 	var rain = L.OWM.rain({opacity: 0.5, appId: OWM_API_KEY});
 	var raincls = L.OWM.rainClassic({opacity: 0.5, appId: OWM_API_KEY});
-	var snow = L.OWM.snow({opacity: 0.5, appId: OWM_API_KEY});
+	//var snow = L.OWM.snow({opacity: 0.5, appId: OWM_API_KEY});
 	var pressure = L.OWM.pressure({opacity: 0.4, appId: OWM_API_KEY});
 	var pressurecntr = L.OWM.pressureContour({opacity: 0.5, appId: OWM_API_KEY});
 	var temp = L.OWM.temperature({opacity: 0.5, appId: OWM_API_KEY});
@@ -427,8 +427,8 @@ function initMap() {
 
 	var useGeolocation = true;
 	var zoom = 6;
-	var lat = 51.58;
-	var lon = 10.1;
+	var lat = 2.7465;
+	var lon = 101.44724;
 	var urlParams = getUrlParameters();
 	if (typeof urlParams.zoom != "undefined" && typeof urlParams.lat != "undefined" && typeof urlParams.lon != "undefined") {
 		zoom = urlParams.zoom;
