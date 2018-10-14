@@ -461,10 +461,35 @@ function initMap() {
 		vertical: false
 	}));
 
-	var baseMaps = {
+var baseMaps = {
 		"OSM Standard": standard
 		, "OSM Humanitarian": humanitarian
-	//	, "ESRI Aerial": esri
+		, "ESRI Aerial": esri
+		, "GeoportailFrance_orthos": GeoportailFrance_orthos
+		, "OpenInfraMap_Power": OpenInfraMap_Power
+		, "OpenInfraMap_Telecom": OpenInfraMap_Telecom
+		, "_ModisSurfaceTemp": NASAGIBS_ModisTerraLSTDay
+		, "OpenRailwayMap": OpenRailwayMap
+		, "EarthNight": NASAGIBS_ViirsEarthAtNight2012
+		, "ModisTerra367": NASAGIBS_ModisTerraBands367CR
+		, "TerraTrueColor": NASAGIBS_ModisTerraTrueColorCR
+		, "HEREHybrid": HERE_hybridDay
+		, "HereNormal": HERE_normalDay
+		, "ESRIRelief": Esri_WorldShadedRelief
+		, "ESRIMap": Esri_NatGeoWorldMap
+		, "ESRIImagery": Esri_WorldImagery
+		, "ESRITopo": Esri_WorldTopoMap
+		, "ESRIDeLome": Esri_DeLorme
+		, "StamenTerrainBg": Stamen_TerrainBackground
+		, "StamenTerrain": Stamen_Terrain
+		, "StamenTL": Stamen_TonerLite
+		, "Hydda": Hydda_Full
+		, "OpenMapSurfer": OpenMapSurfer_Roads
+		, "OpenTopo": OpenTopoMap
+		, "HOT" : OpenStreetMap_HOT
+		, "OSMBW": OpenStreetMap_BlackAndWhite
+		, "Mapnik": OpenStreetMap_Mapnik
+		
 	};
 
 	var overlayMaps = {};
