@@ -569,14 +569,12 @@ function initMap() {
 		vertical: false
 	}));
 	
-	var customLayer = L.geoJson(null, {
+	//var customLayer = L.geoJson(null, {
     // http://leafletjs.com/reference.html#geojson-style
-    style: function(feature) {
-        return { color: '#f00' };
-    }
-});
+    //style: function(feature) {
+      //  return { color: '#f00' };}});
 // this can be any kind of omnivore layer
-	var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer);
+	//var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer);
 
 	var baseMaps = {
 		"floodmap": floodmap
@@ -624,8 +622,9 @@ function initMap() {
 	overlayMaps[getI18n('presscont', localLang)] = pressurecntr;
 	overlayMaps[getI18n('city', localLang) + " (min Zoom 5)"] = city;
 	overlayMaps[getI18n('windrose', localLang)] = windrose;
-
-	var layerControl = L.control.layers(floodmap,baseMaps, overlayMaps, {collapsed: false}).addTo(map);
+	
+	omnivore.kml('DelaunayPusatPemindahan.kml').addTo(map);
+	var layerControl = L.control.layers(baseMaps, overlayMaps, {collapsed: false}).addTo(map);
 	map.addControl(new L.Control.Permalink({layers: layerControl, useAnchor: false, position: 'bottomright'}));
 	
 	// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
