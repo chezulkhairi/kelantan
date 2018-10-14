@@ -336,10 +336,11 @@ function loadGeoJsonString(geoString) {
 function initMap() {
 	
 	var customLayer = L.geoJson(null, {
-    	http://leafletjs.com/reference.html#geojson-style
-    	style: function(feature) {
-      	return { color: '#f00' };}});
-// this can be any kind of omnivore layer
+    filter: function() {
+        // my custom filter function
+        return true;
+    }
+});
 	var floodmap = omnivore.kml('MalaysiaFlood2018.kml', null, customLayer);
 	
 	//var floodmap = L.KML("DelaunayPusatPemindahan.kml", {async: true});
