@@ -336,7 +336,13 @@ function loadGeoJsonString(geoString) {
 function initMap() {
 	
 	//var floodmap = L.KML("DelaunayPusatPemindahan.kml", {async: true});
-
+var customLayer = L.geoJson(null, {
+    // http://leafletjs.com/reference.html#geojson-style
+    style: function(feature) {
+        return { color: '#f00' };
+    }
+});
+// this can be any kind of omnivore layer
 	var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer);
 	var standard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
