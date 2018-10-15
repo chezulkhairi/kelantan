@@ -634,16 +634,6 @@ function initMap() {
 	overlayMaps[getI18n('city', localLang) + " (min Zoom 5)"] = city;
 	overlayMaps[getI18n('windrose', localLang)] = windrose;
 	
-		//
-	var customLayer = L.geoJson(null, {
-    filter: function() {
-        // my custom filter function
-        return true;
-    }
-});
-	var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer);
-	map.addLayer(floodmap);
-	//
 	
 	//var omni = omnivore.kml('DelaunayPusatPemindahan.kml').addTo(map);
 	var layerControl = L.control.layers(baseMaps, overlayMaps, {collapsed: false}).addTo(map);
