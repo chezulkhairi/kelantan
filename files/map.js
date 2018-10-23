@@ -15,6 +15,11 @@ var map;
  * @param String paramVal the value of the parameter
  * @return String the changed URL
  */
+
+
+
+
+
 function updateURLParameter(url, param, paramVal) {
 	var theAnchor = null;
 	var newAdditionalURL = "";
@@ -224,11 +229,112 @@ function toggleWheel(localLang) {
 	}
 }
 
+
+function loadGeoJsonString(geoString) {
+        var geojson = JSON.parse(geoString);
+        map.data.addGeoJson(geojson);
+        zoom(map);
+      }
+
+      /**
+       * Update a map's viewport to fit each geometry in a dataset
+       * @param {google.maps.Map} map The map to adjust
+       */
+      function zoom(map) {
+        var bounds = new google.maps.LatLngBounds();
+        map.data.forEach(function(feature) {
+          processPoints(feature.getGeometry(), bounds.extend, bounds);
+        });
+        map.fitBounds(bounds);
+      }
+
+      /**
+       * Process each point in a Geometry, regardless of how deep the points may lie.
+       * @param {google.maps.Data.Geometry} geometry The structure to process
+       * @param {function(google.maps.LatLng)} callback A function to call on each
+       *     LatLng point encountered (e.g. Array.push)
+       * @param {Object} thisArg The value of 'this' as provided to 'callback' (e.g.
+       *     myArray)
+       */
+      function processPoints(geometry, callback, thisArg) {
+        if (geometry instanceof google.maps.LatLng) {
+          callback.call(thisArg, geometry);
+        } else if (geometry instanceof google.maps.Data.Point) {
+          callback.call(thisArg, geometry.get());
+        } else {
+          geometry.getArray().forEach(function(g) {
+            processPoints(g, callback, thisArg);
+          });
+        }
+      }
+
+
+      /* DOM (drag/drop) functions */
+
+      function initEvents() {
+        // set up the drag & drop events
+        var mapContainer = document.getElementById('map');
+        var dropContainer = document.getElementById('drop-container');
+
+        // map-specific events
+        mapContainer.addEventListener('dragenter', showPanel, false);
+
+        // overlay specific events (since it only appears once drag starts)
+        dropContainer.addEventListener('dragover', showPanel, false);
+        dropContainer.addEventListener('drop', handleDrop, false);
+        dropContainer.addEventListener('dragleave', hidePanel, false);
+      }
+
+      function showPanel(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        document.getElementById('drop-container').style.display = 'block';
+        return false;
+      }
+
+      function hidePanel(e) {
+        document.getElementById('drop-container').style.display = 'none';
+      }
+
+      function handleDrop(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        hidePanel(e);
+
+        var files = e.dataTransfer.files;
+        if (files.length) {
+          // process file(s) being dropped
+          // grab the file data from each file
+          for (var i = 0, file; file = files[i]; i++) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              loadGeoJsonString(e.target.result);
+            };
+            reader.onerror = function(e) {
+              console.error('reading failed');
+            };
+            reader.readAsText(file);
+          }
+        } else {
+          // process non-file (e.g. text or html) content being dropped
+          // grab the plain text version of the data
+          var plainText = e.dataTransfer.getData('text/plain');
+          if (plainText) {
+            loadGeoJsonString(plainText);
+          }
+        }
+
+        // prevent drag event from bubbling further
+        return false;
+      }
+
+
+
 /**
  * Initialize the map.
  */
 function initMap() {
-
+	
 	var customLayer = L.geoJson(null, {
     filter: function() {
         // my custom filter function
@@ -236,20 +342,18 @@ function initMap() {
     }
 });
 	var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer);
-	
-	//var floodmap = L.KML("DelaunayPusatPemindahan.kml", {async: true});
 
-	var standard  = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	var standard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors</a>'
 		});
 
-	var humanitarian =L.tileLayer('https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+	var humanitarian = L.tileLayer('https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 		maxZoom: 17,
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors</a> <a href="https://www.hotosm.org/" target="_blank">Tiles courtesy of Humanitarian OpenStreetMap Team</a>'
 		});
 
-	var esri =  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.jpg", {
+	var esri = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.jpg", {
 		maxZoom: 19, attribution: 'Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 	});
 	
@@ -268,7 +372,7 @@ function initMap() {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://www.openinframap.org/about.html">About OpenInfraMap</a>'
 	});
 	
-	var OpenInfraMap_Telecom =  L.tileLayer('https://tiles-{s}.openinframap.org/telecoms/{z}/{x}/{y}.png', {
+	var OpenInfraMap_Telecom = L.tileLayer('https://tiles-{s}.openinframap.org/telecoms/{z}/{x}/{y}.png', {
 	maxZoom: 18,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://www.openinframap.org/about.html">About OpenInfraMap</a>'
 	});
@@ -284,7 +388,7 @@ function initMap() {
 	opacity: 0.75
 });
 	
-	var OpenRailwayMap =L.tileLayer('https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png', {
+	var OpenRailwayMap = L.tileLayer('https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Map style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 });
@@ -316,7 +420,7 @@ function initMap() {
 	time: '',
 	tilematrixset: 'GoogleMapsCompatible_Level'
 });
-	var HERE_hybridDay =L.tileLayer('https://{s}.{base}.maps.cit.api.here.com/maptile/2.1/{type}/{mapID}/hybrid.day/{z}/{x}/{y}/{size}/{format}?app_id={app_id}&app_code={app_code}&lg={language}', {
+	var HERE_hybridDay = L.tileLayer('https://{s}.{base}.maps.cit.api.here.com/maptile/2.1/{type}/{mapID}/hybrid.day/{z}/{x}/{y}/{size}/{format}?app_id={app_id}&app_code={app_code}&lg={language}', {
 	attribution: 'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
 	subdomains: '1234',
 	mapID: 'newest',
@@ -342,7 +446,7 @@ function initMap() {
 	format: 'png8',
 	size: '256'
 });
-	var Esri_WorldShadedRelief =  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
+	var Esri_WorldShadedRelief = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri',
 	maxZoom: 13
 });
@@ -350,13 +454,13 @@ function initMap() {
 	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
 	maxZoom: 16
 });
-	var Esri_WorldImagery =  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
-	var Esri_WorldTopoMap =  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+	var Esri_WorldTopoMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
 });
-	var Esri_DeLorme =  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}', {
+	var Esri_DeLorme = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Copyright: &copy;2012 DeLorme',
 	minZoom: 1,
 	maxZoom: 11
@@ -371,14 +475,14 @@ function initMap() {
 	maxZoom: 18,
 	ext: 'png'
 });
-	var Stamen_Terrain =  L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', {
+	var Stamen_Terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 	subdomains: 'abcd',
 	minZoom: 0,
 	maxZoom: 18,
 	ext: 'png'
 });
-	var Stamen_TonerLite =L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+	var Stamen_TonerLite = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 	subdomains: 'abcd',
 	minZoom: 0,
@@ -389,11 +493,11 @@ function initMap() {
 	maxZoom: 18,
 	attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
-	var OpenMapSurfer_Roads =  L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
+	var OpenMapSurfer_Roads = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
 	maxZoom: 20,
 	attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
-	var OpenTopoMap =L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+	var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 	maxZoom: 17,
 	attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 });
@@ -401,7 +505,7 @@ function initMap() {
 	maxZoom: 19,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
 });
-	var OpenStreetMap_BlackAndWhite =  L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
+	var OpenStreetMap_BlackAndWhite = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
 	maxZoom: 18,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
@@ -420,6 +524,7 @@ function initMap() {
 	var precipitationcls = L.OWM.precipitationClassic({opacity: 0.5, appId: OWM_API_KEY});
 	var rain = L.OWM.rain({opacity: 0.5, appId: OWM_API_KEY});
 	var raincls = L.OWM.rainClassic({opacity: 0.5, appId: OWM_API_KEY});
+	var snow = L.OWM.snow({opacity: 0.5, appId: OWM_API_KEY});
 	var pressure = L.OWM.pressure({opacity: 0.4, appId: OWM_API_KEY});
 	var pressurecntr = L.OWM.pressureContour({opacity: 0.5, appId: OWM_API_KEY});
 	var temp = L.OWM.temperature({opacity: 0.5, appId: OWM_API_KEY});
@@ -434,11 +539,10 @@ function initMap() {
    			imageLoadingBgUrl: 'https://openweathermap.org/img/w0/iwind.png' });
 	windrose.on('owmlayeradd', windroseAdded, windrose); // Add an event listener to get informed when windrose layer is ready
 
-
 	var useGeolocation = true;
-	var zoom = 6;
-	var lat = 51.58;
-	var lon = 10.1;
+	var zoom = 10;
+	var lat = 2.7465;
+	var lon = 101.44724;
 	var urlParams = getUrlParameters();
 	if (typeof urlParams.zoom != "undefined" && typeof urlParams.lat != "undefined" && typeof urlParams.lon != "undefined") {
 		zoom = urlParams.zoom;
@@ -472,8 +576,8 @@ function initMap() {
 	}));
 
 	var baseMaps = {
-		"floodmap": floodmap
-		, "OSM Standard": standard
+		"floodmap": floodmap,
+		"OSM Standard": standard
 		, "OSM Humanitarian": humanitarian
 		, "ESRI Aerial": esri
 		, "GeoportailFrance_orthos": GeoportailFrance_orthos
@@ -500,6 +604,7 @@ function initMap() {
 		, "HOT" : OpenStreetMap_HOT
 		, "OSMBW": OpenStreetMap_BlackAndWhite
 		, "Mapnik": OpenStreetMap_Mapnik
+		
 	};
 
 	var overlayMaps = {};
@@ -519,6 +624,12 @@ function initMap() {
 
 	var layerControl = L.control.layers(baseMaps, overlayMaps, {collapsed: false}).addTo(map);
 	map.addControl(new L.Control.Permalink({layers: layerControl, useAnchor: false, position: 'bottomright'}));
+	
+	// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
+$.getJSON("countours.geojson",function(data){
+// L.geoJson function is used to parse geojson file and load on to map
+L.geoJson(data).addTo(map);
+});
 
 	// patch layerControl to add some titles
 	var patch = L.DomUtil.create('div', 'owm-layercontrol-header');
@@ -545,4 +656,5 @@ function initMap() {
 	if (useGeolocation && typeof navigator.geolocation != "undefined") {
 		navigator.geolocation.getCurrentPosition(foundLocation);
 	}
+	//initEvents();
 }
