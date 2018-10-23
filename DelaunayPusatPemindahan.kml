@@ -700,24 +700,24 @@
       </Polygon>
     </Placemark>
     <Placemark>
-      <name/>
-      <description><![CDATA[description: <br>Status: 0<br>DamageReport: <br>VictimRelocate: <br>Statistic: ]]></description>
+      <name>0</name>
+      <description><![CDATA[description: 0<br>Status: 0<br>DamageReport: 0<br>VictimRelocate: 0<br>Statistic: 0]]></description>
       <styleUrl>#poly-757575-201-10</styleUrl>
       <ExtendedData>
         <Data name="description">
-          <value/>
+          <value>0</value>
         </Data>
         <Data name="Status">
           <value>0</value>
         </Data>
         <Data name="DamageReport">
-          <value/>
+          <value>0</value>
         </Data>
         <Data name="VictimRelocate">
-          <value/>
+          <value>0</value>
         </Data>
         <Data name="Statistic">
-          <value/>
+          <value>0</value>
         </Data>
       </ExtendedData>
       <Polygon>
@@ -5390,24 +5390,24 @@
       </Polygon>
     </Placemark>
     <Placemark>
-      <name/>
-      <description><![CDATA[description: <br>Status: 0<br>DamageReport: <br>VictimRelocate: <br>Statistic: ]]></description>
+      <name>0</name>
+      <description><![CDATA[description: 0<br>Status: 0<br>DamageReport: 0<br>VictimRelocate: 0<br>Statistic: 0]]></description>
       <styleUrl>#poly-757575-201-10</styleUrl>
       <ExtendedData>
         <Data name="description">
-          <value/>
+          <value>0</value>
         </Data>
         <Data name="Status">
           <value>0</value>
         </Data>
         <Data name="DamageReport">
-          <value/>
+          <value>0</value>
         </Data>
         <Data name="VictimRelocate">
-          <value/>
+          <value>0</value>
         </Data>
         <Data name="Statistic">
-          <value/>
+          <value>0</value>
         </Data>
       </ExtendedData>
       <Polygon>

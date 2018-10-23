@@ -145,12 +145,12 @@ According to the State Disaster Management Committee Secretariat, seven villages
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perhentian Islands</name>
-      <description><![CDATA[<img src="https://lh4.googleusercontent.com/proxy/WV4qxLa1wAd07d5Cojwh572Vx5c" height="200" width="auto" /><br><br>description: http://www.ioc-sealevelmonitoring.org/station.php?code=ms004  (http://www.ioc-sealevelmonitoring.org/station.php?code=ms004 )        http://www.ioc-sealevelmonitoring.org/monitor.php?codes[]=ms004&period=0.5<br>Date: -<br>Location: -<br>Source: -<br>Impact: -<br>Risk: -<br>Statistic: -<br>Displaced: -<br>Economic Loss: -<br>FloodDepth: -<br>InfrastructureLossDamage: -]]></description>
+      <name>Perhentian Islands (Sea Level Monitoring Station)</name>
+      <description><![CDATA[<img src="https://lh4.googleusercontent.com/proxy/WV4qxLa1wAd07d5Cojwh572Vx5c" height="200" width="auto" /><br><br>description: http://www.ioc-sealevelmonitoring.org/station.php?code=ms004 (http://www.ioc-sealevelmonitoring.org/station.php?code=ms004 ) http://www.ioc-sealevelmonitoring.org/monitor.php?codes[]=ms004&period=0.5<br>Date: -<br>Location: -<br>Source: -<br>Impact: -<br>Risk: -<br>Statistic: -<br>Displaced: -<br>Economic Loss: -<br>FloodDepth: -<br>InfrastructureLossDamage: -]]></description>
       <styleUrl>#icon-1899-0288D1</styleUrl>
       <ExtendedData>
         <Data name="description">
-          <value><![CDATA[http://www.ioc-sealevelmonitoring.org/station.php?code=ms004  (http://www.ioc-sealevelmonitoring.org/station.php?code=ms004 )        http://www.ioc-sealevelmonitoring.org/monitor.php?codes[]=ms004&period=0.5]]></value>
+          <value><![CDATA[http://www.ioc-sealevelmonitoring.org/station.php?code=ms004 (http://www.ioc-sealevelmonitoring.org/station.php?code=ms004 ) http://www.ioc-sealevelmonitoring.org/monitor.php?codes[]=ms004&period=0.5]]></value>
         </Data>
         <Data name="Date">
           <value>-</value>
