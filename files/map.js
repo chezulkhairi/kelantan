@@ -342,7 +342,22 @@ function initMap() {
     	}
 	});
 	// this can be any kind of omnivore layer
-	var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer)
+	var MalaysiaFlood2018 = omnivore.kml('MalaysiaFlood2018.kml', null, customLayer)
+	var DelaunayFirstResponderNGO = omnivore.kml('DelaunayFirstResponderNGO.kml', null, customLayer)
+	var DelaunayPusatPemindahan = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer)
+	var FirstResponderNGO = omnivore.kml('FirstResponderNGO.kml', null, customLayer)
+	var Kobo = omnivore.kml('Kobo.kml', null, customLayer)
+	var KoboPusatPemindahan = omnivore.kml('KoboPusatPemindahan.kml', null, customLayer)
+	var LaluanOverflowAirBanjir = omnivore.kml('LaluanOverflowAirBanjir.kml', null, customLayer)
+	var ShortestDistancefromNearestCity = omnivore.kml('ShortestDistancefromNearestCity.kml', null, customLayer)
+	var SocialMedia_Report = omnivore.kml('SocialMedia_Report.kml', null, customLayer)
+	var Sungai = omnivore.kml('Sungai.kml', null, customLayer)
+	var accessibilityKelantanS1 = omnivore.kml('accessibilityKelantanS1.kml', null, customLayer)
+	var accessibilityKelantanS4 = omnivore.kml('accessibilityKelantanS4.kml', null, customLayer)
+	var kelantanRekodBanjir2007_sourceCRISP = omnivore.kml('kelantanRekodBanjir2007_sourceCRISP.kml', null, customLayer)
+	var pusatpemindahan = omnivore.kml('pusatpemindahan.kml', null, customLayer)
+	
+	var floodmap = L.layerGroup([DelaunayFirstResponderNGO, DelaunayPusatPemindahan, pusatpemindahan]);
 	
 	// MalaysiaFlood2018.kml
 	// DelaunayFirstResponderNGO.kml
