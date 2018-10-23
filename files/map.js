@@ -338,17 +338,17 @@ function initMap() {
 	var customLayer1 = L.geoJson(null, {
     	// http://leafletjs.com/reference.html#geojson-style
     		style: function(feature) {
-        return { color: '#f00', "weight": 1, "opacity": 0.65  }; }});
+        return { color: '#f00', "weight": 1, "opacity": 0.25  }; }});
 	
 	var customLayer2 = L.geoJson(null, {
     	// http://leafletjs.com/reference.html#geojson-style
     		style: function(feature) {
-        return { "color": "#ff7800", "weight": 1, "opacity": 0.65 }; }});
+        return { "color": "#ff7800", "weight": 1, "opacity": 0.25 }; }});
 	
 	var customLayer3 = L.geoJson(null, {
     	// http://leafletjs.com/reference.html#geojson-style
     		style: function(feature) {
-        return { color: '#fff', "weight": 1, "opacity": 0.65  }; }});
+        return { color: '#fff', "weight": 1, "opacity": 0.25  }; }});
 	
 	
 	// this can be any kind of omnivore layer
