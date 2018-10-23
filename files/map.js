@@ -578,7 +578,8 @@ function initMap() {
 	}));
 
 	var baseMaps = {
-		"OSM Standard": standard
+		"floodmap": floodmap
+		,"OSM Standard": standard
 		, "OSM Humanitarian": humanitarian
 		, "ESRI Aerial": esri
 		, "GeoportailFrance_orthos": GeoportailFrance_orthos
