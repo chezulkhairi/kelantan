@@ -38,14 +38,14 @@
     </StyleMap>
     <Placemark>
       <name>Futsal BBNGO Bertam Lama</name>
-      <description><![CDATA[description: <br>timestamp: <br>lon: 102.039398<br>lat: 5.156535<br>Status: <br>Logistic: <br>Request: ]]></description>
+      <description><![CDATA[description: 0<br>timestamp: 0<br>lon: 102.039398<br>lat: 5.156535<br>Status: 0<br>Logistic: 0<br>Request: 0]]></description>
       <styleUrl>#icon-1639-000000</styleUrl>
       <ExtendedData>
         <Data name="description">
-          <value/>
+          <value>0</value>
         </Data>
         <Data name="timestamp">
-          <value/>
+          <value>0</value>
         </Data>
         <Data name="lon">
           <value>102.039398</value>
@@ -54,13 +54,13 @@
           <value>5.156535</value>
         </Data>
         <Data name="Status">
-          <value/>
+          <value>0</value>
         </Data>
         <Data name="Logistic">
-          <value/>
+          <value>0</value>
         </Data>
         <Data name="Request">
-          <value/>
+          <value>0</value>
         </Data>
       </ExtendedData>
       <Point>
