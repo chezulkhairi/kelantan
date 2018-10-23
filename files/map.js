@@ -343,7 +343,22 @@ function initMap() {
 	});
 	// this can be any kind of omnivore layer
 	var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer)
-
+	
+	// MalaysiaFlood2018.kml
+	// DelaunayFirstResponderNGO.kml
+	// DelaunayPusatPemindahan.kml
+	// FirstResponderNGO.kml
+	// Kobo.kml
+	// KoboPusatPemindahan.kml
+	// LaluanOverflowAirBanjir.kml
+	// ShortestDistancefromNearestCity.kml
+	// SocialMedia_Report.kml
+	// Sungai.kml
+	// accessibilityKelantanS1.kml
+	// accessibilityKelantanS4.kml
+	// kelantanRekodBanjir2007_sourceCRISP.kml
+	// pusatpemindahan.csv.kml
+	// 
 
 	var standard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
