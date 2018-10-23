@@ -284,8 +284,7 @@ function initMap() {
 	opacity: 0.75
 });
 	
-	var OpenRailwayMap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer),
-	    ril = L.tileLayer('https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png', {
+	var OpenRailwayMap =L.tileLayer('https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Map style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 });
