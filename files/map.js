@@ -334,6 +334,14 @@ function loadGeoJsonString(geoString) {
  * Initialize the map.
  */
 function initMap() {
+	
+	var customLayer = L.geoJson(null, {
+    filter: function() {
+        // my custom filter function
+        return true;
+    }
+});
+	var floodmap = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer);
 
 	var standard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
