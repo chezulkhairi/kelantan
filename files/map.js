@@ -347,7 +347,7 @@ function initMap() {
                 fillOpacity: 0,
                 fillColor: 'white' };}});
 	
-	
+	var wnd = omnivore.geojson('gfs.json')
 	
 	// this can be any kind of omnivore layer
 	var copyflood2018=omnivore.kml('copyFlood2018.kml', null, customLayer)
@@ -398,7 +398,7 @@ function initMap() {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors</a>'
 		});
 	
-	var standard = L.layerGroup([copyflood2018,standardx]);
+	var standard = L.layerGroup([wnd,copyflood2018,standardx]);
 
 	var humanitarianx = L.tileLayer('https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 		maxZoom: 17,
