@@ -507,6 +507,23 @@ function initMap() {
 });
 	var Esri_DeLorme = L.layerGroup([copyflood2018,Esri_DeLormex]);
 	
+	
+	var Esri_NatGeoWorldMapx = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+	maxZoom: 16
+});
+	var Esri_NatGeoWorldMap = L.layerGroup([copyflood2018,Esri_NatGeoWorldMapx]);
+	
+	var Esri_WorldImageryx = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+});
+	var Esri_WorldImagery = L.layerGroup([copyflood2018,Esri_WorldImageryx]);
+	
+	var Esri_WorldTopoMapx = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+});
+	var Esri_WorldTopoMap = L.layerGroup([copyflood2018,Esri_WorldTopoMapx]);
+	
 	var Esri_WorldStreetMapx = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 });
