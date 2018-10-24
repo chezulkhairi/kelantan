@@ -347,10 +347,7 @@ function initMap() {
                 fillColor: 'white'  }; }}).bindTooltip(function (layer) {
     	return layer.feature.properties.name;
  	};
-	// Later in the script
-	$.getJSON(url, function( data ) {
-  	layers_grid.addData(data);
-	});
+	
 
 	
 	
@@ -715,10 +712,15 @@ function initMap() {
 	map.addControl(new L.Control.Permalink({layers: layerControl, useAnchor: false, position: 'bottomright'}));
 	
 	// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
-$.getJSON("countours.geojson",function(data){
-// L.geoJson function is used to parse geojson file and load on to map
-L.geoJson(data).addTo(map);
-});
+	$.getJSON("countours.geojson",function(data){
+	// L.geoJson function is used to parse geojson file and load on to map
+	L.geoJson(data).addTo(map);
+	});
+	
+	// Later in the script
+	$.getJSON(url, function( data ) {
+  	layers_grid.addData(data);
+	});
 
 	// patch layerControl to add some titles
 	var patch = L.DomUtil.create('div', 'owm-layercontrol-header');
