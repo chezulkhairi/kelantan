@@ -385,14 +385,11 @@ function initMap() {
 	// pusatpemindahan.csv.kml
 	// 
 	
-	var copyflood2018 = omnivore
-  .kml("copyFlood2018")
-  .on("ready", function(event) {
+	var copyflood2018 = omnivore.kml("copyFlood2018").on("ready", function(event) {
     console.clear();
     event.target.eachLayer(function(layer) {
       console.log(layer);
-      let biadata = JSON.parse(layer.feature.properties.description),
-          bianame = layer.feature.properties.name;
+      let biadata = JSON.parse(layer.feature.properties.description),bianame = layer.feature.properties.name;
       layer.bindTooltip(bianame);
       layer.bindPopup("<strong>" + bianame + "</strong>" + "<br>" + biadata.desc);
       switch(biadata.accessibility){
@@ -405,8 +402,7 @@ function initMap() {
         case 2:
           layer.setStyle({color:'red'});
           break;
-      }
-    });
+      }});
    
 
 	var standardx = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
