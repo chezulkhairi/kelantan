@@ -340,11 +340,11 @@ function initMap() {
     	// http://leafletjs.com/reference.html#geojson-style
     		style: function(feature) {
         return { weight: 1,
-                opacity: 0.2,
+                opacity: 1,
                 color: 'white',
                 dashArray: '3',
-                fillOpacity: 0.1,
-                fillColor: '#ff0000'  }; }});
+                fillOpacity: 0,
+                fillColor: '#ffffff'  }; }});
 	
 
 	
