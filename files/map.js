@@ -710,6 +710,21 @@ function initMap() {
 	var layerControl = L.control.layers(baseMaps, overlayMaps, {collapsed: false}).addTo(map);
 	map.addControl(new L.Control.Permalink({layers: layerControl, useAnchor: false, position: 'bottomright'}));
 	
+	map.on("click", function(event) {
+    dynLayer.identify(event.latlng, setupIdentifyHandler(event));
+ });
+
+function setupIdentifyHandler(event) {
+  return function (data) {
+     if (data.results.length > 0) {
+       var popup = L.popup()
+         .setLatLng(event.latlng)
+         .setContent(data.results[0].value)
+         .openOn(map);
+     }
+  };
+}
+	
 	// Bind a popup to each feature in hospitalLayer and libraryLayer
 		copyflood2018.eachLayer(function (layer) {
 			layer.bindPopup('<strong>' + layer.feature.properties.Name + '</strong>', { closeButton: false });
