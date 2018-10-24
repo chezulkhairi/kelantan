@@ -351,7 +351,7 @@ function initMap() {
 	
 	
 	// this can be any kind of omnivore layer
-	var copyflood2018=omnivore.kml('copyFlood2018.kml', null, customLayer)
+	// var copyflood2018=omnivore.kml('copyFlood2018.kml', null, customLayer)
 	// var MalaysiaFlood2018 = omnivore.kml('MalaysiaFlood2018.kml', null, customLayer)
 	// var DelaunayFirstResponderNGO = omnivore.kml('DelaunayFRNGO.kml', null, customLayer)
 	// var DelaunayPusatPemindahan = omnivore.kml('DelaunayPP.kml', null, customLayer)
@@ -384,6 +384,38 @@ function initMap() {
 	// kelantanRekodBanjir2007_sourceCRISP.kml
 	// pusatpemindahan.csv.kml
 	// 
+	
+	var copyflood2018 = omnivore
+  .kml("copyFlood2018")
+  .on("ready", function(event) {
+    console.clear();
+/*    console.log(event.target instanceof L.GeoJSON);
+    console.log(event);
+    event.target.options.onEachFeature = function(f,l){console.log(f);};
+    console.log(event.target.options.onEachFeature);
+  */
+    event.target.eachLayer(function(layer) {
+      console.log(layer);
+      let biadata = JSON.parse(layer.feature.properties.description),
+          bianame = layer.feature.properties.name;
+      layer.bindTooltip(bianame);
+      layer.bindPopup("<strong>" + bianame + "</strong>" + "<br>" + biadata.desc);
+      switch(biadata.accessibility){
+        case 0:
+          layer.setStyle({color:'green'});
+          break;
+        case 1:
+          layer.setStyle({color:'yellow'});
+          break;
+        case 2:
+          layer.setStyle({color:'red'});
+          break;
+      }
+    });
+    map.fitBounds(event.target.getBounds());
+    //map.addLayer(event.target);
+  })
+  .addTo(map);
 
 	var standardx = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
