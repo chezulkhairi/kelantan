@@ -707,7 +707,7 @@ function initMap() {
 	overlayMaps[getI18n('precipitationcls', localLang)] = precipitationcls;
 	overlayMaps[getI18n('rain', localLang)] = rain;
 	overlayMaps[getI18n('raincls', localLang)] = raincls;
-	overlayMaps[getI18n('snow', localLang)] = snow;
+	//overlayMaps[getI18n('snow', localLang)] = snow;
 	overlayMaps[getI18n('temp', localLang)] = temp;
 	overlayMaps[getI18n('windspeed', localLang)] = wind;
 	overlayMaps[getI18n('pressure', localLang)] = pressure;
