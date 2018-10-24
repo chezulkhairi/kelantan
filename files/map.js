@@ -365,9 +365,9 @@ function initMap() {
 	var accessibilityKelantanS1 = omnivore.kml('accessibilityKelantanS1.kml', null, customLayer)
 	var accessibilityKelantanS4 = omnivore.kml('accessibilityKelantanS4.kml', null, customLayer)
 	var kelantanRekodBanjir2007_sourceCRISP = omnivore.kml('kelantanRekodBanjir2007_sourceCRISP.kml', null, customLayer)
-	var pusatpemindahan = omnivore.kml('pusatpemindahan.kml', null, customLayerC)
+	//var pusatpemindahan = omnivore.kml('pusatpemindahan.kml', null, customLayerC)
 	
-	var floodmap = L.layerGroup([DelaunayFirstResponderNGO, DelaunayPusatPemindahan, pusatpemindahan]);
+	var floodmap = L.layerGroup([DelaunayFirstResponderNGO, DelaunayPusatPemindahan]);
 	
 	// MalaysiaFlood2018.kml
 	// DelaunayFirstResponderNGO.kml
