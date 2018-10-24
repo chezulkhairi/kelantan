@@ -345,6 +345,7 @@ function initMap() {
 	
 	
 	// this can be any kind of omnivore layer
+	var copyflood2018=omnivore.kml('copyFlood2018.kml', null, customLayer)
 	var MalaysiaFlood2018 = omnivore.kml('MalaysiaFlood2018.kml', null, customLayer)
 	var DelaunayFirstResponderNGO = omnivore.kml('DelaunayFRNGO.kml', null, customLayer)
 	var DelaunayPusatPemindahan = omnivore.kml('DelaunayPP.kml', null, customLayer)
@@ -383,7 +384,7 @@ function initMap() {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors</a>'
 		});
 	
-	var floodmap = L.layerGroup([DelaunayPusatPemindahan,standard]);
+	var floodmap = L.layerGroup([copyflood2018,standard]);
 
 	var humanitarian = L.tileLayer('https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 		maxZoom: 17,
