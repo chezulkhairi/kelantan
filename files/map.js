@@ -746,20 +746,7 @@ function setupIdentifyHandler(event) {
   };
 }
 	
-	// Bind a popup to each feature in hospitalLayer and libraryLayer
-		copyflood2018.eachLayer(function (layer) {
-			layer.bindPopup('<strong>' + layer.feature.properties.Name + '</strong>', { closeButton: false });
-		}).addTo(map);
-		// Open popups on hover
-		copyflood2018.on('mouseover', function (e) {
-			e.layer.openPopup();
-		});
-	copyflood2018.bindLabel(
-    	feature.properties["name"], 
-    	{
-        	className: 'map-label', 
-        	pane:'popupPane'
-    	});
+
 	
 	// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
 	$.getJSON("countours.geojson",function(data){
