@@ -712,8 +712,21 @@ function initMap() {
 	
 	map.on("click", function(event) {
     dynLayer.identify(event.latlng, setupIdentifyHandler(event));
+		
+		
  });
+	
+var popup = L.popup();
 
+    function onMapClick(e) {
+      popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+    }
+
+    map.on('click', onMapClick);
+	
 function setupIdentifyHandler(event) {
   return function (data) {
      if (data.results.length > 0) {
