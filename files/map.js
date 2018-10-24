@@ -339,7 +339,12 @@ function initMap() {
 	var customLayer = L.geoJson(null, {
     	// http://leafletjs.com/reference.html#geojson-style
     		style: function(feature) {
-        return { color: '#f00', "weight": 1, "opacity": 0.15  }; }});
+        return { weight: 1,
+                opacity: 0.2,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.1,
+                fillColor: '#ff0000'  }; }});
 	
 
 	
