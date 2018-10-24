@@ -356,9 +356,7 @@ function initMap() {
 	var customLayer = L.geoJSON(null, {
   filter: function(geoJsonFeature) {
     // my custom filter function: do not display Point type features.
-    return geoJsonFeature.geometry.type !== 'Point';
-  }
-}).addTo(map);
+    return geoJsonFeature.geometry.type !== 'Point';  } });
 	
 	var wnd = omnivore.geojson('gfs.json')
 	
