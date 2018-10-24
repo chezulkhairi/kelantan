@@ -339,7 +339,7 @@ function initMap() {
 	var customLayer = L.geoJson(null, {
     	// http://leafletjs.com/reference.html#geojson-style
     		style: function(feature) {
-        return { color: '#f00', "weight": 1, "opacity": 0.25  }; }});
+        return { color: '#f00', "weight": 1, "opacity": 0.15  }; }});
 	
 
 	
@@ -360,7 +360,7 @@ function initMap() {
 	var kelantanRekodBanjir2007_sourceCRISP = omnivore.kml('kelantanRekodBanjir2007_sourceCRISP.kml', null, customLayer)
 	//var pusatpemindahan = omnivore.kml('pusatpemindahan.kml', null, customLayer)
 	
-	var floodmap = L.layerGroup([DelaunayFirstResponderNGO, DelaunayPusatPemindahan]);
+	var floodmap = L.layerGroup([DelaunayPusatPemindahan]);
 	
 	// MalaysiaFlood2018.kml
 	// DelaunayFirstResponderNGO.kml
