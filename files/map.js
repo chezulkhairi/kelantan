@@ -336,17 +336,16 @@ function loadGeoJsonString(geoString) {
  */
 function initMap() {
 	
+	
 	var customLayer = L.geoJson(null, {
     	// http://leafletjs.com/reference.html#geojson-style
-    		style: function(feature) {
-        return { weight: 1,
+    	style: function(feature) {
+        	return { weight: 1,
                 opacity: 1,
                 color: 'black',
                 dashArray: '3',
                 fillOpacity: 0,
-                fillColor: 'white'  }; }}).bindTooltip(function (layer) {
-    	return layer.feature.properties.name;
- 	};
+                fillColor: 'white' };}});
 	
 
 	
