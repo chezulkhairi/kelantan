@@ -711,11 +711,11 @@ function initMap() {
 	map.addControl(new L.Control.Permalink({layers: layerControl, useAnchor: false, position: 'bottomright'}));
 	
 	// Bind a popup to each feature in hospitalLayer and libraryLayer
-		standard.eachLayer(function (layer) {
+		copyflood2018.eachLayer(function (layer) {
 			layer.bindPopup('<strong>' + layer.feature.properties.Name + '</strong>', { closeButton: false });
 		}).addTo(map);
 		// Open popups on hover
-		libraryLayer.on('mouseover', function (e) {
+		copyflood2018.on('mouseover', function (e) {
 			e.layer.openPopup();
 		});
 
