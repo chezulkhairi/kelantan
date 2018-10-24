@@ -336,6 +336,12 @@ function loadGeoJsonString(geoString) {
  */
 function initMap() {
 	
+	var runLayer = omnivore.kml('copyFlood2018.kml', null, customLayer)
+            .on('ready', function() {
+                runLayer.eachLayer(function(layer) {
+                    layer.bindPopup(layer.feature.properties.description);
+                });
+
 	
 	var customLayer = L.geoJson(null, {
     	// http://leafletjs.com/reference.html#geojson-style
@@ -404,7 +410,7 @@ function initMap() {
 		maxZoom: 17,
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors</a> <a href="https://www.hotosm.org/" target="_blank">Tiles courtesy of Humanitarian OpenStreetMap Team</a>'
 		});
-	var humanitarian = L.layerGroup([copyflood2018,humanitarianx]);
+	var humanitarian = L.layerGroup([runLayer,humanitarianx]);
 
 	var esrix = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.jpg", {
 		maxZoom: 19, attribution: 'Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
