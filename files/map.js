@@ -386,23 +386,12 @@ function initMap() {
 	// 
 	
 	var copyflood2018 = omnivore.kml("copyFlood2018").on("ready", function(event) {
-    console.clear();
-    event.target.eachLayer(function(layer) {
-      console.log(layer);
-      let biadata = JSON.parse(layer.feature.properties.description),bianame = layer.feature.properties.name;
-      layer.bindTooltip(bianame);
-      layer.bindPopup("<strong>" + bianame + "</strong>" + "<br>" + biadata.desc);
-      switch(biadata.accessibility){
-        case 0:
-          layer.setStyle({color:'green'});
-          break;
-        case 1:
-          layer.setStyle({color:'yellow'});
-          break;
-        case 2:
-          layer.setStyle({color:'red'});
-          break;
-      }});
+    	event.target.eachLayer(function(layer) {
+      	console.log(layer);
+      	let biadata = JSON.parse(layer.feature.properties.description),bianame = layer.feature.properties.name;
+      	layer.bindTooltip(bianame);
+      	layer.bindPopup("<strong>" + bianame + "</strong>" + "<br>" + biadata.desc);
+      	});
    
 
 	var standardx = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
