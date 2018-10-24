@@ -379,12 +379,12 @@ function initMap() {
 	// pusatpemindahan.csv.kml
 	// 
 
-	var standard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	var standardx = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors</a>'
 		});
 	
-	var floodmap = L.layerGroup([copyflood2018,standard]);
+	var standard = L.layerGroup([copyflood2018,standardx]);
 
 	var humanitarianx = L.tileLayer('https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 		maxZoom: 17,
@@ -637,8 +637,7 @@ function initMap() {
 	}));
 
 	var baseMaps = {
-		"floodmap": floodmap
-		,
+
 		"OSM Standard": standard
 		, "OSM Humanitarian": humanitarian
 		, "ESRI Aerial": esri
