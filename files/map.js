@@ -611,6 +611,8 @@ function initMap() {
 	}));
 
 	var baseMaps = {
+		"floodmap": floodmap
+		,
 		"OSM Standard": standard
 		, "OSM Humanitarian": humanitarian
 		, "ESRI Aerial": esri
