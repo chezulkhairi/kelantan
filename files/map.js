@@ -710,6 +710,16 @@ function initMap() {
 	var layerControl = L.control.layers(baseMaps, overlayMaps, {collapsed: false}).addTo(map);
 	map.addControl(new L.Control.Permalink({layers: layerControl, useAnchor: false, position: 'bottomright'}));
 	
+	// Bind a popup to each feature in hospitalLayer and libraryLayer
+		standard.eachLayer(function (layer) {
+			layer.bindPopup('<strong>' + layer.feature.properties.Name + '</strong>', { closeButton: false });
+		}).addTo(map);
+		// Open popups on hover
+		libraryLayer.on('mouseover', function (e) {
+			e.layer.openPopup();
+		});
+
+	
 	// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
 	$.getJSON("countours.geojson",function(data){
 	// L.geoJson function is used to parse geojson file and load on to map
