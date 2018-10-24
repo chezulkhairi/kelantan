@@ -343,7 +343,7 @@ function initMap() {
         //        });
 
 	
-	var customLayer = L.geoJson(null, {
+	var customLayerA = L.geoJson(null, {
     	// http://leafletjs.com/reference.html#geojson-style
     	style: function(feature) {
         	return { weight: 1,
@@ -352,6 +352,13 @@ function initMap() {
                 dashArray: '3',
                 fillOpacity: 0,
                 fillColor: 'white' };}});
+	
+	var customLayer = L.geoJSON(null, {
+  filter: function(geoJsonFeature) {
+    // my custom filter function: do not display Point type features.
+    return geoJsonFeature.geometry.type !== 'Point';
+  }
+}).addTo(map);
 	
 	var wnd = omnivore.geojson('gfs.json')
 	
