@@ -505,12 +505,12 @@ function initMap() {
 	minZoom: 1,
 	maxZoom: 11
 });
-	var Esri_DeLormex = L.layerGroup([copyflood2018,Esri_DeLormex]);
+	var Esri_DeLorme = L.layerGroup([copyflood2018,Esri_DeLormex]);
 	
-	var Esri_WorldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+	var Esri_WorldStreetMapx = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 });
-	var Esri_DeLorme = L.layerGroup([copyflood2018,Esri_DeLormex]);
+	var Esri_WorldStreetMap = L.layerGroup([copyflood2018,Esri_WorldStreetMapx]);
 	
 	var Stamen_TerrainBackgroundx = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -561,9 +561,9 @@ function initMap() {
 	maxZoom: 19,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
 });
-	var OpenStreetMap_HOTx = L.layerGroup([copyflood2018,OpenStreetMap_HOTx]);
+	var OpenStreetMap_HOT = L.layerGroup([copyflood2018,OpenStreetMap_HOTx]);
 	
-	var OpenStreetMap_BlackAndWhite = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
+	var OpenStreetMap_BlackAndWhitex = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
 	maxZoom: 18,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
