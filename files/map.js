@@ -347,11 +347,10 @@ function initMap() {
                 fillOpacity: 0,
                 fillColor: 'white' };}});
 	
-
 	
 	
 	// this can be any kind of omnivore layer
-	// var copyflood2018=omnivore.kml('copyFlood2018.kml', null, customLayer)
+	var copyflood2018=omnivore.kml('copyFlood2018.kml', null, customLayer)
 	// var MalaysiaFlood2018 = omnivore.kml('MalaysiaFlood2018.kml', null, customLayer)
 	// var DelaunayFirstResponderNGO = omnivore.kml('DelaunayFRNGO.kml', null, customLayer)
 	// var DelaunayPusatPemindahan = omnivore.kml('DelaunayPP.kml', null, customLayer)
@@ -385,13 +384,13 @@ function initMap() {
 	// pusatpemindahan.csv.kml
 	// 
 	
-	var copyflood2018 = omnivore.kml("copyFlood2018").on("ready", function(event) {
-    	event.target.eachLayer(function(layer) {
-      	console.log(layer);
-      	let biadata = JSON.parse(layer.feature.properties.description),bianame = layer.feature.properties.name;
-      	layer.bindTooltip(bianame);
-      	layer.bindPopup("<strong>" + bianame + "</strong>" + "<br>" + biadata.desc);
-      	});
+	//var copyflood2018 = omnivore.kml("copyFlood2018").on("ready", function(event) {
+    	//event.target.eachLayer(function(layer) {
+      	//console.log(layer);
+      	//let biadata = JSON.parse(layer.feature.properties.description),bianame = layer.feature.properties.name;
+      	//layer.bindTooltip(bianame);
+      	//layer.bindPopup("<strong>" + bianame + "</strong>" + "<br>" + biadata.desc);
+      	//});
    
 
 	var standardx = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
