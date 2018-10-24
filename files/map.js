@@ -717,10 +717,7 @@ function initMap() {
 	L.geoJson(data).addTo(map);
 	});
 	
-	// Later in the script
-	$.getJSON(url, function( data ) {
-  	layers_grid.addData(data);
-	});
+
 
 	// patch layerControl to add some titles
 	var patch = L.DomUtil.create('div', 'owm-layercontrol-header');
