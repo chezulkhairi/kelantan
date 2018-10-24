@@ -389,11 +389,6 @@ function initMap() {
   .kml("copyFlood2018")
   .on("ready", function(event) {
     console.clear();
-/*    console.log(event.target instanceof L.GeoJSON);
-    console.log(event);
-    event.target.options.onEachFeature = function(f,l){console.log(f);};
-    console.log(event.target.options.onEachFeature);
-  */
     event.target.eachLayer(function(layer) {
       console.log(layer);
       let biadata = JSON.parse(layer.feature.properties.description),
@@ -412,10 +407,7 @@ function initMap() {
           break;
       }
     });
-    map.fitBounds(event.target.getBounds());
-    //map.addLayer(event.target);
-  })
-  .addTo(map);
+   
 
 	var standardx = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
