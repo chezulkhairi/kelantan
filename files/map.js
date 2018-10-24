@@ -346,8 +346,8 @@ function initMap() {
 	
 	// this can be any kind of omnivore layer
 	var MalaysiaFlood2018 = omnivore.kml('MalaysiaFlood2018.kml', null, customLayer)
-	var DelaunayFirstResponderNGO = omnivore.kml('DelaunayFirstResponderNGO.kml', null, customLayer)
-	var DelaunayPusatPemindahan = omnivore.kml('DelaunayPusatPemindahan.kml', null, customLayer)
+	var DelaunayFirstResponderNGO = omnivore.kml('DelaunayFRNGO.kml', null, customLayer)
+	var DelaunayPusatPemindahan = omnivore.kml('DelaunayPP.kml', null, customLayer)
 	var FirstResponderNGO = omnivore.kml('FirstResponderNGO.kml', null, customLayer)
 	var Kobo = omnivore.kml('Kobo.kml', null, customLayer)
 	var KoboPusatPemindahan = omnivore.kml('KoboPusatPemindahan.kml', null, customLayer)
