@@ -360,7 +360,7 @@ function initMap() {
 	var kelantanRekodBanjir2007_sourceCRISP = omnivore.kml('kelantanRekodBanjir2007_sourceCRISP.kml', null, customLayer)
 	//var pusatpemindahan = omnivore.kml('pusatpemindahan.kml', null, customLayer)
 	
-	var floodmap = L.layerGroup([DelaunayPusatPemindahan]);
+	//var floodmap = L.layerGroup([DelaunayPusatPemindahan]);
 	
 	// MalaysiaFlood2018.kml
 	// DelaunayFirstResponderNGO.kml
@@ -382,6 +382,8 @@ function initMap() {
 		maxZoom: 19,
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors</a>'
 		});
+	
+	var floodmap = L.layerGroup([DelaunayPusatPemindahan,standard]);
 
 	var humanitarian = L.tileLayer('https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 		maxZoom: 17,
