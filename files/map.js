@@ -341,11 +341,16 @@ function initMap() {
     		style: function(feature) {
         return { weight: 1,
                 opacity: 1,
-                color: 'white',
+                color: 'black',
                 dashArray: '3',
                 fillOpacity: 0,
-                fillColor: '#ffffff'  }; }});
-	
+                fillColor: 'white'  }; }}).bindTooltip(function (layer) {
+    	return layer.feature.properties.name;
+ 	};
+	// Later in the script
+	$.getJSON(url, function( data ) {
+  	layers_grid.addData(data);
+	});
 
 	
 	
