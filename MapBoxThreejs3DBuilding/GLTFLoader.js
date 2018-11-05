@@ -90,29 +90,18 @@ THREE.GLTFLoader = ( function () {
 				var magic = THREE.LoaderUtils.decodeText( new Uint8Array( data, 0, 4 ) );
 
 				if ( magic === BINARY_EXTENSION_HEADER_MAGIC ) {
-
-					try {
-
-						extensions[ EXTENSIONS.KHR_BINARY_GLTF ] = new GLTFBinaryExtension( data );
-
-					} catch ( error ) {
-
-						if ( onError ) onError( error );
-						return;
-
-					}
-
-					content = extensions[ EXTENSIONS.KHR_BINARY_GLTF ].content;
-
+    					extensions[ EXTENSIONS.KHR_BINARY_GLTF ] = new GLTFBinaryExtension( data );
+    					content = extensions[ EXTENSIONS.KHR_BINARY_GLTF ].content;
+    					var json = JSON.parse( content );
 				} else {
-
-					content = THREE.LoaderUtils.decodeText( new Uint8Array( data ) );
-
+  					try {
+    						var json = JSON.parse( data );
+  						}
+  					catch ( e ) {
+    						content = convertUint8ArrayToString( new Uint8Array( data ) );
+    						var json = JSON.parse( content );
+  						}
 				}
-
-			}
-
-			var json = JSON.parse( content );
 
 			if ( json.asset === undefined || json.asset.version[ 0 ] < 2 ) {
 
