@@ -72,7 +72,7 @@ var threeJSModel = {
         this.scene.add(directionalLight2);
 
         var loader = new THREE.GLTFLoader();
-        loader.load('34M_17.gltf', (function (gltf) {
+        loader.load('https://beccazhou1207.github.io/aframetest1/assets/concrete_modular_sculpture/scene.gltf', (function (gltf) {
             this.scene.add(gltf.scene);
         }).bind(this));
         this.map = map;
