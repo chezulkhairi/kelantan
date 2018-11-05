@@ -72,7 +72,7 @@ var threeJSModel = {
         this.scene.add(directionalLight2);
 
         var loader = new THREE.GLTFLoader();
-        loader.load('34M_17.gltf', (function (gltf) {
+        loader.load('https://threejs.org/examples/models/gltf/DamagedHelmet/glTF/DamagedHelmet.gltf', (function (gltf) {
             this.scene.add(gltf.scene);
         }).bind(this));
         this.map = map;
@@ -123,4 +123,3 @@ map.on('style.load', function() {
 </script>
 
 </body>
-</html>
