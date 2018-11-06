@@ -653,6 +653,7 @@ function initMap() {
 		lat = urlParams.lat;
 		lon = urlParams.lon;
 		useGeolocation = false;
+		pitch: 60;
 	}
 
 	map = L.map('map', {
