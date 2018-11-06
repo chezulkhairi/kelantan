@@ -644,16 +644,16 @@ function initMap() {
 	windrose.on('owmlayeradd', windroseAdded, windrose); // Add an event listener to get informed when windrose layer is ready
 
 	var useGeolocation = true;
-	var zoom = 17.5; //10;
-	var lat = -35.39847; //148.98190, -35.39847
-	var lon = 148.98190;
+	var zoom = 10;
+	var lat = 5.984875286827038;
+	var lon = 102.24426269531249;
 	var urlParams = getUrlParameters();
 	if (typeof urlParams.zoom != "undefined" && typeof urlParams.lat != "undefined" && typeof urlParams.lon != "undefined") {
 		zoom = urlParams.zoom;
 		lat = urlParams.lat;
 		lon = urlParams.lon;
 		useGeolocation = false;
-		pitch: 60;
+		//pitch: 60;
 	}
 
 	map = L.map('map', {
