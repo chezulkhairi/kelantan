@@ -84,6 +84,7 @@ var THREE = window.THREE;
 
 // Create the Mapbox Custom Layer object
 // See 
+var angle=0;
 var threeJSModel = {
     id: 'custom_layer',
     type: 'custom',
@@ -98,6 +99,11 @@ var threeJSModel = {
         var directionalLight2 = new THREE.DirectionalLight(0xffffff);
         directionalLight2.position.set(0, 70, 100).normalize();
         this.scene.add(directionalLight2);
+	    
+	angle-=0.1;
+  
+  	directionalLight2.position.x =10+10*Math.sin(angle);
+  	directionalLight2.position.y =10+10*Math.cos(angle);
 
         var loader = new THREE.GLTFLoader();
         loader.load('https://beccazhou1207.github.io/aframetest1/assets/concrete_modular_sculpture/scene.gltf', (function (gltf) {
