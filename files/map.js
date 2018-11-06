@@ -658,7 +658,8 @@ function initMap() {
 
 	map = L.map('map', {
 		center: new L.LatLng(lat, lon), zoom: zoom,
-		layers: [standard]
+		layers: [standard].
+		pitch:60
 	});
 	map.attributionControl.setPrefix("");
 
