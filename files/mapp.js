@@ -362,6 +362,7 @@ function initMap() {
 	
 	// this can be any kind of omnivore layer
 	var copyflood2018=omnivore.kml('copyFlood2018.kml', null, customLayer)
+	var aaa=omnivore.kml('aaa.kml', null, customLayer)
 	// var MalaysiaFlood2018 = omnivore.kml('MalaysiaFlood2018.kml', null, customLayer)
 	// var DelaunayFirstResponderNGO = omnivore.kml('DelaunayFRNGO.kml', null, customLayer)
 	// var DelaunayPusatPemindahan = omnivore.kml('DelaunayPP.kml', null, customLayer)
@@ -503,7 +504,7 @@ function initMap() {
 	format: 'png8',
 	size: '256'
 	});
-	var HERE_hybridDay = L.layerGroup([copyflood2018,HERE_hybridDayx]);
+	var HERE_hybridDay = L.layerGroup([aaa,HERE_hybridDayx]);
 	
 	var HERE_normalDayx = L.tileLayer('https://{s}.{base}.maps.cit.api.here.com/maptile/2.1/{type}/{mapID}/normal.day/{z}/{x}/{y}/{size}/{format}?app_id={app_id}&app_code={app_code}&lg={language}', {
 	attribution: 'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
@@ -518,7 +519,7 @@ function initMap() {
 	format: 'png8',
 	size: '256'
 	});
-	var HERE_normalDay = L.layerGroup([copyflood2018,HERE_normalDayx]);
+	var HERE_normalDay = L.layerGroup([aaa,HERE_normalDayx]);
 	
 	var Esri_WorldShadedReliefx = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri',
