@@ -362,7 +362,7 @@ function initMap() {
 	
 	// this can be any kind of omnivore layer
 	var copyflood2018=omnivore.kml('copyFlood2018.kml', null, customLayer)
-	var aaa=omnivore.kml('aaa.kml', null, customLayer)
+	//var aaa=omnivore.kml('aaa.kml', null, customLayer)
 	// var MalaysiaFlood2018 = omnivore.kml('MalaysiaFlood2018.kml', null, customLayer)
 	// var DelaunayFirstResponderNGO = omnivore.kml('DelaunayFRNGO.kml', null, customLayer)
 	// var DelaunayPusatPemindahan = omnivore.kml('DelaunayPP.kml', null, customLayer)
