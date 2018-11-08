@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Extrusion Lighting</title>
+    <script src='mapbox-gl-dev-light.js'></script>
+    <script src='colorpicker.js'></script>
+    <script src='globe.js'></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #controls {
+            position: absolute;
+            left:20px;
+            top:20px;
+        }
+
+        .sp-container: {
+            border: none !important;
+            border-radius: 3px !important;
+            background: rgba(0,0,0,0) !important;
+        }
+
+        .grabby {
+            cursor: -webkit-grab;
+            cursor: -moz-grab;
+            cursor: grab;
+        }
+
+        .grabbed {
+            cursor: -webkit-grabbing;
+            cursor: -moz-grabbing;
+            cursor: grabbing;
+        }
+
+        .crosshair {
+            cursor: -webkit-crosshair;
+            cursor: -moz-crosshair;
+            cursor: crosshair;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='map'></div>
+
+    <div id='controls' class='col3 small strong pin-topleft clearfix round clip fill-dark dark pad2'>
+        <div class='col12 clearfix'>
+            <span>Light intensity</span>
+            <fieldset>
+                <input class='col12' id='intensity' type='range' value='0.5' min='0' max='1' step='0.01'>
+            </fieldset>
+        </div>
+        <div class='col12 clearfix'>
+            <span>Light color</span>
+            <div style='padding:5px 0px;' id='canv'></div>
+            <span>Light direction</span>
+            <div style='padding:5px 0px;' id='globe'></div>
+        </div>
+    </div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoibmlja2kiLCJhIjoiczVvbFlXQSJ9.1Gegt3V_MTupW6wfjxq2QA';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            zoom: 15.1,
+            center: [-74.0109, 40.7066],
+            pitch: 60,
+            bearing: 0,
+            hash: true,
+            style: 'mapbox://styles/nicki/ciua9r4dx002h2iscumy1a3zl',
+        });
+
+        map.on('load', function() {
+          map.scrollZoom.disable();
+          map.setLight({color: "#6ef", intensity: 0.5, position: [1.15, 135, 45]});
+          map.addLayer({
+          "id": "3d-buildings",
+          "source": "composite",
+          "source-layer": "building",
+          "type": "fill",
+          "filter": ["in", "extrude", "true"],
+          "paint": {
+              "fill-color": "#f6f6f6",
+              "fill-opacity": 0.85,
+              "fill-extrude-height": {
+                          "stops": [
+                              [0, 0],
+                              [1000, 1000],
+                              [2000, 20]
+                          ],
+                          "property": "height"
+                      },
+                      "fill-extrude-base": {
+                          "stops": [
+                              [0, 0],
+                              [1000, 1000],
+                              [2000, 20]
+                          ],
+                          "property": "min_height"
+                      }
+            }
+          }, 'poi_label');
+      });
+
+        map.addControl(new mapboxgl.Navigation({position: 'top-right'}));
+
+        var canvEl = document.getElementById('canv');
+
+        var g = Globe()
+            .color('rgba(255,255,255,0.8)')
+            .lightColor('#86cfd2')
+            .width(canv.offsetWidth)
+            .on('change',function(rotation) {
+                map.setLight({ position: rotation, 'position-transition': {duration: 0} });
+            });
+
+        d3.select('#canv')
+            .append('div')
+            .call(ColorPicker()
+                    .width(canv.offsetWidth)
+                    .height(Math.min(canv.offsetWidth, 150))
+                    .center('#86cfd2')
+                    .on('change',function(color) {
+                        g.lightColor(color);
+                        map.setLight({ color: color, 'color-transition': {duration: 0} });
+                    }));
+
+        d3.select('#globe')
+            .append('div')
+            .call(g);
+
+        document.getElementById('intensity').addEventListener('input', function(e) {
+            map.setLight({ intensity: +e.target.value, 'intensity-transition': {duration: 0} });
+        });
+
+        function setHeight(h) {
+            map.setPaintProperty('3d-buildings', 'fill-extrude-height', {
+                stops: [
+                    [{zoom: 15, value: 0}, 0],
+                    [{zoom: 15, value: 1000}, 0],
+                    [{zoom: 15, value: 2000}, 0],
+                    [{zoom: 15.1, value: 0}, 0],
+                    [{zoom: 15.1, value: 1000}, 1000 * h],
+                    [{zoom: 15.1, value: 2000}, 20 * h]
+                ],
+                property: 'height'
+            });
+            map.setPaintProperty('3d-buildings', 'fill-extrude-base', {
+                stops: [
+                    [{zoom: 15, value: 0}, 0],
+                    [{zoom: 15, value: 1000}, 0],
+                    [{zoom: 15, value: 2000}, 0],
+                    [{zoom: 15.1, value: 0}, 0],
+                    [{zoom: 15.1, value: 1000}, 1000 * h],
+                    [{zoom: 15.1, value: 2000}, 0]
+                ],
+                property: 'min_height'
+            });
+        }
+    </script>
+
+</body>
+
+</html>
