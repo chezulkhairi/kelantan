@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Folder><name>aaa</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>148.9776269,-35.3984573 148.9815357,-35.3957848 148.9813478,-35.402429 148.9776269,-35.3984573</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>148.9784982,-35.3950963 148.9815357,-35.3957848 148.9776269,-35.3984573 148.9784982,-35.3950963</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>148.9823556,-35.4040455 148.9776269,-35.3984573 148.9813478,-35.402429 148.9823556,-35.4040455</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>148.9815357,-35.3957848 148.9823556,-35.4040455 148.9813478,-35.402429 148.9815357,-35.3957848</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>
