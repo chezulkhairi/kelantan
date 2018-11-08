@@ -37,7 +37,21 @@
 </head>
 <body>
 
-    <div id="map"></div>
+    <div id="map">
+	<div id='controls' class='col3 small strong pin-topleft clearfix round clip fill-dark dark pad2'>
+        <div class='col12 clearfix'>
+            <span>Light intensity</span>
+            <fieldset>
+                <input class='col12' id='intensity' type='range' value='0.5' min='0' max='1' step='0.01'>
+            </fieldset>
+        </div>
+        <div class='col12 clearfix'>
+            <span>Light color</span>
+            <div style='padding:5px 0px;' id='canv'></div>
+            <span>Light direction</span>
+            <div style='padding:5px 0px;' id='globe'></div>
+        </div>
+	</div>
 	<script>
 		initMap();
 		if (!confirm("Please not that this page is only a demonstration for an OpenWeatherMap leaflet plugin.\nIt is not intended for productive use.\n\nVisit https://github.com/buche/leaflet-openweathermap for more information.\n\nClick OK to proceed with the map or click Cancel to visit Github.")) {
