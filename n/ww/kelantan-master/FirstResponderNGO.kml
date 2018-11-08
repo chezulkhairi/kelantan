@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>FirstResponderNGO</name>
+    <Style id="icon-1502-FF5252-normal">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1502-FF5252-highlight">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1502-FF5252">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1502-FF5252-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1502-FF5252-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1502-FF5252-nodesc-normal">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1502-FF5252-nodesc-highlight">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1502-FF5252-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1502-FF5252-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1502-FF5252-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1656-673AB7-normal">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1656-673AB7-highlight">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1656-673AB7">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1656-673AB7-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1656-673AB7-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1656-673AB7-nodesc-normal">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1656-673AB7-nodesc-highlight">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1656-673AB7-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1656-673AB7-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1656-673AB7-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Pusat Pemindahan AlFalah</name>
+      <description><![CDATA[<img src="https://lh3.googleusercontent.com/proxy/KHEe0FIbHmd67DjC9JUttzjratBV0zqaW9nCMbUn8dLJHL6Wpx5pWTctBS68bW4O4rzKaSlSHm_DmyrZwILf5e2nGEb5qJH1xlk-xwKQyG0FxHxobTKj4ypkm1kcrdZ57z9LeNF-BIKw1iSFeLu1tIxxBZa0WHoJlFjGttW_cdTpT2Kn13B1v4ERL9fttFsF3tuAPJaTmgrbHBgI8vpOTb95L9P8dPpG-v-8zRbMRSG_xwIqKSs" height="200" width="auto" /><br><br>Gedung Cinta Al-Falah, 624, Kedai Jln Guchil 5<br><br><img src="https://lh5.googleusercontent.com/proxy/7BMABpUr-hyHqduTR8bkKbHtM3yjn5xHfoaPhDZY8ILqxM_TH6ldE7hgYq-MdVSuJCZfwbSTQ_lDu4mKocoFs49_xhXrejA4K3JGQruOxIfVXtkC1QgFzOkt1OWanK5tlpp_2UgvvSTWoELPMNdrI8FwfW9WECYdhBZmib1Mit4PoguQbWTbydyCkPH7wL9PW9BcYQ-vmxmRAtHCt_z3M8vZXbyUbXy8-Ez013nS2_rUDTZWIw" height="200" width="auto" />]]></description>
+      <styleUrl>#icon-1502-FF5252</styleUrl>
+      <ExtendedData>
+        <Data name="gx_media_links">
+          <value>https://lh3.googleusercontent.com/proxy/KHEe0FIbHmd67DjC9JUttzjratBV0zqaW9nCMbUn8dLJHL6Wpx5pWTctBS68bW4O4rzKaSlSHm_DmyrZwILf5e2nGEb5qJH1xlk-xwKQyG0FxHxobTKj4ypkm1kcrdZ57z9LeNF-BIKw1iSFeLu1tIxxBZa0WHoJlFjGttW_cdTpT2Kn13B1v4ERL9fttFsF3tuAPJaTmgrbHBgI8vpOTb95L9P8dPpG-v-8zRbMRSG_xwIqKSs https://lh5.googleusercontent.com/proxy/7BMABpUr-hyHqduTR8bkKbHtM3yjn5xHfoaPhDZY8ILqxM_TH6ldE7hgYq-MdVSuJCZfwbSTQ_lDu4mKocoFs49_xhXrejA4K3JGQruOxIfVXtkC1QgFzOkt1OWanK5tlpp_2UgvvSTWoELPMNdrI8FwfW9WECYdhBZmib1Mit4PoguQbWTbydyCkPH7wL9PW9BcYQ-vmxmRAtHCt_z3M8vZXbyUbXy8-Ez013nS2_rUDTZWIw</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          102.200417,5.550076,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>BBNGO PokYa</name>
+      <styleUrl>#icon-1502-FF5252-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.198856,5.532096,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Futsal BBNGO Bertam Lama</name>
+      <description><![CDATA[<img src="https://lh6.googleusercontent.com/proxy/XQAugl7_Q97lU8Vz_6UhBVb_qwJRCi9wLANHBCbRXqgMijMk_MUFJ16ffzxxxxuu9Nz6UgahORCNWUaQpAk9EVjm3daz5llWDO1XDGG97fQ9A5anPo8twwpL2J150IhXSDMD-bhaW4ZW_2zm97EumiaW6jkdZhCLUL6HxHZY3rGeqhzgVLDf0Q8vaXrK5EFxSXIHsOKHXDFaU0AAZuq19R_iopHM5ngnmb_MbJWMRD7ioOuZfyA" height="200" width="auto" /><br><br>Ramah mesra dengan penduduk kampung<br><br><img src="https://lh6.googleusercontent.com/proxy/d6A85AkHrxTc3AXYAcrBUuuIGQpi6O9Qcs1UknAAYhM3Z1f2qzDJddKq3bLuZzp3xkUQQaNbNI7dlM7gKoijWzyDKMxPdegcY19Lp_KhldT41ZrjfhTfhOnfg0vofJiGxUhiAXu6fvQfZrzIm4B795pz4kO9gmddvbQHZXUpNdifycVMD1f2BHz1QoE1-1InHqB7uqLYMIMT-Qm8NMwItF7xu0YhBWtbcKi5O6luO0Fdoazyxvw" height="200" width="auto" /><br><br><img src="https://lh3.googleusercontent.com/proxy/cy8EiytrdDbSkBjwHwk7zkaxuIaDXcskZr0lI_ED7gq6CCXvv9aJrb6CuH3PEel74LHkwG4GpgADTvoYXctSj0oOSL-4BiXbtcZe7nJeSVtkr_YLbRjVcLrl2rtvyGJ0-Ixwu4fXNk1Hb3IUxhXCEV3JCZD4GOvxho90tAV8YFG274BSRR7qelPXnesaF_2bq4-jwb_NPJLlY7G-wckyCvlzymuhtdm1yWmK5Stf_xmgYroZHxW1Og" height="200" width="auto" /><br><br><img src="https://lh4.googleusercontent.com/proxy/YkEnHYJZPZVCAMGSdSl7R3PqpFNSLBuwB_eQv9LcpDMn0GNYqGjM6H9mEh1PQtQiM9YUXlvizZ-1F0Q8_ddckxLChfyNknQGHeJzkvQiu9pUapgYn9FaCnTYhX69sY2rsgypt0VUZm1DEznlqIkyKleIfKSoAIVkwS98JpMOr92IeH2yr_qErA-nr1U07mRNJQ8XxZPHtuwRvh4khjHLJnXJ2-DGpHfC2X2Hdl2N46jzGQ6Oqc4UzA" height="200" width="auto" /><br><br><img src="https://lh3.googleusercontent.com/proxy/6fyChdSMYzlHE8e4BvpPyxzX4crSXgJAIdLpScO0Y_0zNs2bHve7FJpjAWrFp-kqDQoiP7G-2OSrYh-vHT1glIycmQxW62Wv4hboASYjz-CdtOe83fYbpSyzUQc7yjPZFmRn5VjSieYQwN8Ktig2gJkQ8vsXpXmES0Dq-cHPOwh4evW7dxECSXeOdIUsj0vlYrwx5J-AHIdpN_Iz7DQU17-qHBiLgUYg0mlneWl9bWe7eQu2BQ" height="200" width="auto" /><br><br><img src="https://lh5.googleusercontent.com/proxy/xIUpHY37GuuOCscKpSh2bfYBFOiRj8_YQO1C0DddaAs4jBbjsvgezpX4pDi5Vo5uUZwg0JltnwteS0MXOI_VU9NGMMobNiMub7nOQm2wVCidB1Kl1aeRPg6M-zq_jQ44OpTq1G5byTmq7mwNBxzk5oQ9bf0-lF8ukq1CduV6gvrrMSnbLNFgaFmQNYJVccRnrzTxIDf1m0F0VhsiS_q2881xbIadO0o-2buCZDiuWlLlfddwK3g0sA" height="200" width="auto" /><br><br><img src="https://lh4.googleusercontent.com/proxy/P2V89UjDegd8gRgi4BwfdqP3kHunZ2Dh0Jty1YkVEOiqyP2N8ZGgVR5ZtezdK1JijPHdAzYcbYGq-bUpQgfm2tOV6R8uPSC1yp0qRmKJk_yICh6a4pct2hLe39hU_gbVTYlZhPVNRI9rov5ueglA0FKBLOMvh4_-3IgDAXpERw1Os-irS9361MpRy1iBS5yiwB4DgMQFtTqbq8DzMLaV3d32E-oJtTN-6whowlrXJ4ngIfcHz34" height="200" width="auto" />]]></description>
+      <styleUrl>#icon-1502-FF5252</styleUrl>
+      <ExtendedData>
+        <Data name="gx_media_links">
+          <value>https://lh6.googleusercontent.com/proxy/XQAugl7_Q97lU8Vz_6UhBVb_qwJRCi9wLANHBCbRXqgMijMk_MUFJ16ffzxxxxuu9Nz6UgahORCNWUaQpAk9EVjm3daz5llWDO1XDGG97fQ9A5anPo8twwpL2J150IhXSDMD-bhaW4ZW_2zm97EumiaW6jkdZhCLUL6HxHZY3rGeqhzgVLDf0Q8vaXrK5EFxSXIHsOKHXDFaU0AAZuq19R_iopHM5ngnmb_MbJWMRD7ioOuZfyA https://lh6.googleusercontent.com/proxy/d6A85AkHrxTc3AXYAcrBUuuIGQpi6O9Qcs1UknAAYhM3Z1f2qzDJddKq3bLuZzp3xkUQQaNbNI7dlM7gKoijWzyDKMxPdegcY19Lp_KhldT41ZrjfhTfhOnfg0vofJiGxUhiAXu6fvQfZrzIm4B795pz4kO9gmddvbQHZXUpNdifycVMD1f2BHz1QoE1-1InHqB7uqLYMIMT-Qm8NMwItF7xu0YhBWtbcKi5O6luO0Fdoazyxvw https://lh3.googleusercontent.com/proxy/cy8EiytrdDbSkBjwHwk7zkaxuIaDXcskZr0lI_ED7gq6CCXvv9aJrb6CuH3PEel74LHkwG4GpgADTvoYXctSj0oOSL-4BiXbtcZe7nJeSVtkr_YLbRjVcLrl2rtvyGJ0-Ixwu4fXNk1Hb3IUxhXCEV3JCZD4GOvxho90tAV8YFG274BSRR7qelPXnesaF_2bq4-jwb_NPJLlY7G-wckyCvlzymuhtdm1yWmK5Stf_xmgYroZHxW1Og https://lh4.googleusercontent.com/proxy/YkEnHYJZPZVCAMGSdSl7R3PqpFNSLBuwB_eQv9LcpDMn0GNYqGjM6H9mEh1PQtQiM9YUXlvizZ-1F0Q8_ddckxLChfyNknQGHeJzkvQiu9pUapgYn9FaCnTYhX69sY2rsgypt0VUZm1DEznlqIkyKleIfKSoAIVkwS98JpMOr92IeH2yr_qErA-nr1U07mRNJQ8XxZPHtuwRvh4khjHLJnXJ2-DGpHfC2X2Hdl2N46jzGQ6Oqc4UzA https://lh3.googleusercontent.com/proxy/6fyChdSMYzlHE8e4BvpPyxzX4crSXgJAIdLpScO0Y_0zNs2bHve7FJpjAWrFp-kqDQoiP7G-2OSrYh-vHT1glIycmQxW62Wv4hboASYjz-CdtOe83fYbpSyzUQc7yjPZFmRn5VjSieYQwN8Ktig2gJkQ8vsXpXmES0Dq-cHPOwh4evW7dxECSXeOdIUsj0vlYrwx5J-AHIdpN_Iz7DQU17-qHBiLgUYg0mlneWl9bWe7eQu2BQ https://lh5.googleusercontent.com/proxy/xIUpHY37GuuOCscKpSh2bfYBFOiRj8_YQO1C0DddaAs4jBbjsvgezpX4pDi5Vo5uUZwg0JltnwteS0MXOI_VU9NGMMobNiMub7nOQm2wVCidB1Kl1aeRPg6M-zq_jQ44OpTq1G5byTmq7mwNBxzk5oQ9bf0-lF8ukq1CduV6gvrrMSnbLNFgaFmQNYJVccRnrzTxIDf1m0F0VhsiS_q2881xbIadO0o-2buCZDiuWlLlfddwK3g0sA https://lh4.googleusercontent.com/proxy/P2V89UjDegd8gRgi4BwfdqP3kHunZ2Dh0Jty1YkVEOiqyP2N8ZGgVR5ZtezdK1JijPHdAzYcbYGq-bUpQgfm2tOV6R8uPSC1yp0qRmKJk_yICh6a4pct2hLe39hU_gbVTYlZhPVNRI9rov5ueglA0FKBLOMvh4_-3IgDAXpERw1Os-irS9361MpRy1iBS5yiwB4DgMQFtTqbq8DzMLaV3d32E-oJtTN-6whowlrXJ4ngIfcHz34</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          102.039398,5.156535,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Urus Setia Pembangunan Wanita, Keluarga dan Kebajikan POB MESRA</name>
+      <description>https://m.facebook.com/upwkk</description>
+      <styleUrl>#icon-1502-FF5252</styleUrl>
+      <Point>
+        <coordinates>
+          102.242058,6.109024,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>TM ROVERS</name>
+      <description><![CDATA[<img src="https://lh5.googleusercontent.com/proxy/vkJVrHk30g9BNDrKv2FCcdGdjns208Ix3DiP_EyJIAcNTkdSXVC_n0gmfW6ujo0STJ6ya1dK7qT_81oLJpJsvjj399ElcYP99dTgzkpvDxutDTwVLJv2zxGbCncKf1ciwvt_MiRHl2unfUS_YsY7igBXrt38LlarQ0jIg137EWa2SHAOIsiwn8-7s-eC1XaTU-hP5RND0UJq5WqHYgLyXCeX0YQMmr7JJY_TQ6HxbaJLntgfVA" height="200" width="auto" /><br><br><br><br><img src="https://lh5.googleusercontent.com/proxy/ABCgPhz0BUDsCftUUuEFvRk-C3IcKHRF841MywH4nn-pescg1_QTMA8ut5lzGYpDFz5EWOGk6BTOAFQ-NFsidbiANnEMxu2WzyY24vVKcbv7uAl6DChnSmtYSvAz_fMj_R3LqP-knaWG6Sa_lFQAXcgNRlznwNNSL8Kl0pZ0FpBpcmEedHyu7Nir-FRtxZGjbaRrBGpYeo1eeMbezx83rEhU7nIsdY4S73mWM4xPRd40iovuWTc" height="200" width="auto" /><br><br><img src="https://lh5.googleusercontent.com/proxy/KZWDKroIDDnf88gbjMJ01p2YvzBGCTlWHmaNpEw_Yn82-n7XEOQ3jSN1976Wt8S56IBEU2WWcwg8JJ5fn5rWMPyj3PLXI88ntTsKQo1Lpw1jNq-VacPoGEeIfA73mLnugr4RDNlVsGdxX5BotsJt50fDvrosfZlsBE_6HFc0LG32CxlhREfYXchdnZuMa5F9k4X0Udh3KUviC0UC3D_cRyDA_ZDM-3xbXGOyaNLwRzYmw0LJZUs" height="200" width="auto" /><br><br><img src="https://lh5.googleusercontent.com/proxy/CFU_mmiFfctyL_XNwCi8I0tKNEf0sahIzG7EcoRFeFQF9Jtf6V8zxCJKwW3wx0ysAr2yQEeOieuPrmcWQKE5gXim5aWIHKjuWkfvmi2Y7Dk9QPk8IVLh58KShNyvwwS8D9tRrzho3YlkTxLvD4LF_H7mFbasFGtgxHfuKYj-aMN3WFx_i58VXpQsdNXaajJXl4U3rlEzewK2GbfEcLEhw4oIPccOOG1UFEL4AuCINAQUyIALYNE" height="200" width="auto" /><br><br><img src="https://lh3.googleusercontent.com/proxy/X0dnI5wTctW0nWgYVpbBH6x2nRDmOkj_M7RrSwPqvkEWJ1zvDgSP9YLxB5caHglib0yxIlEa-wn0egOu9sTQjfXODFhpSjtpqo6QvXM50KGmSvvpDPZVpi4cZtVQpcl9GrAOZTWm2eFADsMdBQGBwYdo03RyRVpKOlgTfzKNnd-0KQPUtKXAoikLsd-6YSixdvoXUAOFX3zAXNicTvd0J-mvRtnjZGs5fi6qb2S3OsAqFcA5yg" height="200" width="auto" /><br><br><img src="https://lh5.googleusercontent.com/proxy/KNZqjCzgo_sDWMmBgsQ-Ojktwc_hIdT7CKczYhcQYF39SZMDT2R4DD3Q79-Cadk2B0ib612Zys4-lGcQEuWMuLDINRkXxL3O2c301UcN2U7Rau60KERqGooMWCSHUP7f9ITonsJCbgYRoWalVQOyA52WgZZp2ORzM9eVoDRZajp3prJmW6B3W0CImWaybjhsOSsBpr1n-XJRPcH_ST82sjDP7b0aPXEzU51fS2C1qDz3zNNynzA" height="200" width="auto" /><br><br><img src="https://lh5.googleusercontent.com/proxy/BFdxcItW9V7x3YVOpVqlZ7tTt0eiQ_2GdK_DjD-kcgDh-WERMNEEmXV2fkE1wjV_xmHuoUHRWUwwweY4nBwZ-j3C2Xw1tnkEMH_l-BLKCQNpNQADmHJ5ZjzN5hMsu2Bb09NLoLPMhEJH1dWKGzkXzXLmu8hd0KN6dkRyaxn8D012preAh5KTaP7s0f7GEBBfPVn5gg6LPibeGwHiydFMUG0l7mQkM3yNNzU7MT3DmX4FEJkpmCn4hw" height="200" width="auto" /><br><br><img src="https://lh3.googleusercontent.com/proxy/XyRPXkkjNNuAoBWbBYqdW20HATPZ6lNw0AYxQSj54cPCY71AigN9B8R6KrVxwkT6yAjR5kMnM3Os-SbuvWEm8BUiXEfLfUOEVVLI66nffDk_TetrcRMdElG8TfETj-wg3RfSjf3AjjSck01bzXB1KPXVOoMAnIY_sLQG9IHyWqnF3n4LzwYw16zupBD9poXzqQKIq8ZaaJPJHvngij3ZSAwUulMYW1UAC4xSGzor2cCWJpMPDA" height="200" width="auto" />]]></description>
+      <styleUrl>#icon-1502-FF5252</styleUrl>
+      <ExtendedData>
+        <Data name="gx_media_links">
+          <value>https://lh5.googleusercontent.com/proxy/vkJVrHk30g9BNDrKv2FCcdGdjns208Ix3DiP_EyJIAcNTkdSXVC_n0gmfW6ujo0STJ6ya1dK7qT_81oLJpJsvjj399ElcYP99dTgzkpvDxutDTwVLJv2zxGbCncKf1ciwvt_MiRHl2unfUS_YsY7igBXrt38LlarQ0jIg137EWa2SHAOIsiwn8-7s-eC1XaTU-hP5RND0UJq5WqHYgLyXCeX0YQMmr7JJY_TQ6HxbaJLntgfVA https://lh5.googleusercontent.com/proxy/ABCgPhz0BUDsCftUUuEFvRk-C3IcKHRF841MywH4nn-pescg1_QTMA8ut5lzGYpDFz5EWOGk6BTOAFQ-NFsidbiANnEMxu2WzyY24vVKcbv7uAl6DChnSmtYSvAz_fMj_R3LqP-knaWG6Sa_lFQAXcgNRlznwNNSL8Kl0pZ0FpBpcmEedHyu7Nir-FRtxZGjbaRrBGpYeo1eeMbezx83rEhU7nIsdY4S73mWM4xPRd40iovuWTc https://lh5.googleusercontent.com/proxy/KZWDKroIDDnf88gbjMJ01p2YvzBGCTlWHmaNpEw_Yn82-n7XEOQ3jSN1976Wt8S56IBEU2WWcwg8JJ5fn5rWMPyj3PLXI88ntTsKQo1Lpw1jNq-VacPoGEeIfA73mLnugr4RDNlVsGdxX5BotsJt50fDvrosfZlsBE_6HFc0LG32CxlhREfYXchdnZuMa5F9k4X0Udh3KUviC0UC3D_cRyDA_ZDM-3xbXGOyaNLwRzYmw0LJZUs https://lh5.googleusercontent.com/proxy/CFU_mmiFfctyL_XNwCi8I0tKNEf0sahIzG7EcoRFeFQF9Jtf6V8zxCJKwW3wx0ysAr2yQEeOieuPrmcWQKE5gXim5aWIHKjuWkfvmi2Y7Dk9QPk8IVLh58KShNyvwwS8D9tRrzho3YlkTxLvD4LF_H7mFbasFGtgxHfuKYj-aMN3WFx_i58VXpQsdNXaajJXl4U3rlEzewK2GbfEcLEhw4oIPccOOG1UFEL4AuCINAQUyIALYNE https://lh3.googleusercontent.com/proxy/X0dnI5wTctW0nWgYVpbBH6x2nRDmOkj_M7RrSwPqvkEWJ1zvDgSP9YLxB5caHglib0yxIlEa-wn0egOu9sTQjfXODFhpSjtpqo6QvXM50KGmSvvpDPZVpi4cZtVQpcl9GrAOZTWm2eFADsMdBQGBwYdo03RyRVpKOlgTfzKNnd-0KQPUtKXAoikLsd-6YSixdvoXUAOFX3zAXNicTvd0J-mvRtnjZGs5fi6qb2S3OsAqFcA5yg https://lh5.googleusercontent.com/proxy/KNZqjCzgo_sDWMmBgsQ-Ojktwc_hIdT7CKczYhcQYF39SZMDT2R4DD3Q79-Cadk2B0ib612Zys4-lGcQEuWMuLDINRkXxL3O2c301UcN2U7Rau60KERqGooMWCSHUP7f9ITonsJCbgYRoWalVQOyA52WgZZp2ORzM9eVoDRZajp3prJmW6B3W0CImWaybjhsOSsBpr1n-XJRPcH_ST82sjDP7b0aPXEzU51fS2C1qDz3zNNynzA https://lh5.googleusercontent.com/proxy/BFdxcItW9V7x3YVOpVqlZ7tTt0eiQ_2GdK_DjD-kcgDh-WERMNEEmXV2fkE1wjV_xmHuoUHRWUwwweY4nBwZ-j3C2Xw1tnkEMH_l-BLKCQNpNQADmHJ5ZjzN5hMsu2Bb09NLoLPMhEJH1dWKGzkXzXLmu8hd0KN6dkRyaxn8D012preAh5KTaP7s0f7GEBBfPVn5gg6LPibeGwHiydFMUG0l7mQkM3yNNzU7MT3DmX4FEJkpmCn4hw https://lh3.googleusercontent.com/proxy/XyRPXkkjNNuAoBWbBYqdW20HATPZ6lNw0AYxQSj54cPCY71AigN9B8R6KrVxwkT6yAjR5kMnM3Os-SbuvWEm8BUiXEfLfUOEVVLI66nffDk_TetrcRMdElG8TfETj-wg3RfSjf3AjjSck01bzXB1KPXVOoMAnIY_sLQG9IHyWqnF3n4LzwYw16zupBD9poXzqQKIq8ZaaJPJHvngij3ZSAwUulMYW1UAC4xSGzor2cCWJpMPDA</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          102.4653624,5.9029233,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>IMARET</name>
+      <description><![CDATA[<img src="https://lh6.googleusercontent.com/proxy/H_XkZK0a2AE2XEDkug9D6-YwFxGN1039ieq5golNEY6RnvrFL6-6czRAteh4hCiEt-SwAUdzEr9bUB2EVRD6zCW3B2-Y0Bbg7m18AodLuZrY827N0aXxnERtcwPlKcMhVUCk6mwT-FoTvgyOdL_p6rvngDDD6ReI9DVmDQWDKFRNj_NuE8cj35idIfXnF7MQgFPeY98J7njzCj0oKKjCHG9lKHLyk2mrglJYDhPU_xBsclL-eg" height="200" width="auto" /><br><br>*.   IMARET East Coast Flood Relief 2017<br><br>3rd mission: 8/1/17<br><br>Activities: <br>1. Distribution of Hygiene Kits to 30 families<br>2. Recce around Tumpat and Rantau Panjang<br><br>Location: <br>1. Kg Kot Batu<br>2. Kg Jeram Perdah, Rantau <br><br>This mision mobilises 2 teams for distribution of hygiene kits and recce around Tumpat and Rantau Panjang. The team was lead by Dr Mazlyn Mustafa.<br><br>The team able to distribute 30 hygiene kits to 30 underprivileged families around Kg Kot Batu and Kg Jeram Perdah, Rantau Panjang.<br><br>The team noted that some area still not reachable by 4wd due to high water level;<br>1. Kg Lanchang<br>2. Kg Kuala Jambu<br>3. Kg Kubang Pak Itam, Pasir Mas<br>4. Kg simpangan, Tumpat<br><br>This mission is very essential to identify the next area for future flood relief.<br><br><br>Thank you to all the donours!<br><br>Help us to help the flood victims by donating to:<br>Persatuan Perubatan Islam Malaysia<br>8600703709 CIMB Bank<br>562834623415 Maybank<br>(online banking, kindly label: #floodrelief)<br><br>notify: imamrelief@gmail.com<br><br>"Charity Begins with You"<br><br>#IMARET<br>#FloodRelief17 @@@@InsyaAllah,, IMARET dan KUWAK akan ke Kg Lanchang pagi esok<br>1. medical team<br>2. hygiene kits utk 45 families<br>3. bantuan makanan dari KUWAK   IMARET East Coast Flood Relief 2017*<br><br>We urgently need volunteers (Kelantan based) to provide medical relief at flood affected areas.<br><br>1. Doctors<br>2. Medical Assistants<br>3. Staff Nurses<br>4. Medical students<br>5. Pharmacist<br><br>Date: 8/1/2017<br><br>Location: Pasir Mas & Tumpat, Kelantan<br><br>To sign up, please contact for Dr Afifah, 0199851506 or Erma Farhana, 013251 9274‬ for more information‪.<br><br><img src="https://lh3.googleusercontent.com/proxy/6r9me7ZoK4xJ6VnisPUd4--x_PngjS4E0UeTtto8pweYD1FukhPJYj2SonCU2YP_3U0JC8_HERL6RcOdfp6AAhiAR31RXSrgl4Wt4OPt8GfxmYSn-prWSJCcvOQpDx7A9SHaLIhA9uoxdJobUm1xucH2W6nUnbvqaeDIKLSeVLY9pzFSfHNVCbq_xfmsmeD3rD9ia25CDFr4h_5RMisuvTYTZDVIIHhe6_wi-RZr9ASOZ4SfAFMNoQ" height="200" width="auto" /><br><br><img src="https://lh4.googleusercontent.com/proxy/tTOe9B0e_9SbrNiT4pxv7hY1npwoWqIDvC2ij6H-J8SUFwiKJaIbjvw-FqW_wc9nVQoGTCvX8X_gqGYYatMi5pGS736FTpRv08qaBdrLB9xVajYw8zYoI2-06Y6I1Hn29EXeVLzV9Tsy5iaDMZBbvWy-yiHzr_EwZ2-c5xyNM81cC6XNXkYF0f8T2W9N-3tFaHFU-yt_ZXcxwyTQ1LWDSuFuY4TcUAzIncaPDcx00GC4xW3SReE" height="200" width="auto" /><br><br><img src="https://lh5.googleusercontent.com/proxy/jTEM5HlQsKt0XoIJkt4OUmn2Iamp9nYfSSW-prrckD5zUh7QNR2gdZZy8rjMFo_GU9nGlc_i-ukU_eGY2GArIPAlx8ThA1k6njdldtkFnV4xkKtNHFh9ysG3Y6j6PNzsCMW78o0tw4fucvpVkt3SrBxRNOBncdFKD2ycEnR_V7tVxCNjYr6tRtluX1tbGQaBDbAZVUZ6gQcD6mW7sSc85OI9115MB6QNkr1osOfw0MVPN5Hir7U" height="200" width="auto" /><br><br><img src="https://lh6.googleusercontent.com/proxy/Og3Td2DlG4lc7mQUU4pmQE6gehrqf0zf_g3Tw-trd6HvIZkWGTjnwE2JbAmDFUhT_mlOX1bDA6uAmCWGL-ZjL5JTElNOYniyWNU094OtO0EXGiidivmHobJFc3bJEBCekfpL2O7eizSbD7N3lVQ1nsxoUnpYNFjnaO6AvUbDqqrNfiroV8QnXBh3A2RCTamkv7W0p2c5u71ZtO7w2yHw4Ube89KmWtHsMv_qrgkhU96kEzij_WA" height="200" width="auto" /><br><br><img src="https://lh3.googleusercontent.com/proxy/xaU9-2bS6BXUb2JhpjSQQbk89IMLWZtta6hAY0Ur0H2DhjtEIKQIDmAqbkcLKTiwj9O9-xMhBrib6WR-efj9oeDJOsHiyRClFBcmrlqOIhQpid2fmRMHR5OrvMZtIjBzNovjiBqrOkFpLuD9Fk7jwd3SYC9AXAaCT8UBug6AO2T2crW3NrKn-M0W6xl-drMQVmifdNkLU1nK0jGf3PLiTYF0szCwvKDXgO9kVZYP5VNFlub9EPY" height="200" width="auto" /><br><br><img src="https://lh3.googleusercontent.com/proxy/_gEmWothhCfDJP8Ze3_y47557HzXOF5__6HHuJHzn56lv_Z4ObaAD_mu1CvQ5X1CdD_TKNoI4SbD5Qisd8DTntu2y9GtuFx-yLc2mEp7GrCRmmNtPxpsUvtXs7aVRKYn_fiLaDz9tSSBB5PwUd1pKdlRKvWOcZ9Jh2HXIBffOhPpTocmk_Lbxh16mroruCb43XYuqNG58OjQOSeW1voV0F_gllrVgLW-brvyHDFAzMSvxi88mU0" height="200" width="auto" />]]></description>
+      <styleUrl>#icon-1502-FF5252</styleUrl>
+      <ExtendedData>
+        <Data name="gx_media_links">
+          <value>https://lh6.googleusercontent.com/proxy/H_XkZK0a2AE2XEDkug9D6-YwFxGN1039ieq5golNEY6RnvrFL6-6czRAteh4hCiEt-SwAUdzEr9bUB2EVRD6zCW3B2-Y0Bbg7m18AodLuZrY827N0aXxnERtcwPlKcMhVUCk6mwT-FoTvgyOdL_p6rvngDDD6ReI9DVmDQWDKFRNj_NuE8cj35idIfXnF7MQgFPeY98J7njzCj0oKKjCHG9lKHLyk2mrglJYDhPU_xBsclL-eg https://lh3.googleusercontent.com/proxy/6r9me7ZoK4xJ6VnisPUd4--x_PngjS4E0UeTtto8pweYD1FukhPJYj2SonCU2YP_3U0JC8_HERL6RcOdfp6AAhiAR31RXSrgl4Wt4OPt8GfxmYSn-prWSJCcvOQpDx7A9SHaLIhA9uoxdJobUm1xucH2W6nUnbvqaeDIKLSeVLY9pzFSfHNVCbq_xfmsmeD3rD9ia25CDFr4h_5RMisuvTYTZDVIIHhe6_wi-RZr9ASOZ4SfAFMNoQ https://lh4.googleusercontent.com/proxy/tTOe9B0e_9SbrNiT4pxv7hY1npwoWqIDvC2ij6H-J8SUFwiKJaIbjvw-FqW_wc9nVQoGTCvX8X_gqGYYatMi5pGS736FTpRv08qaBdrLB9xVajYw8zYoI2-06Y6I1Hn29EXeVLzV9Tsy5iaDMZBbvWy-yiHzr_EwZ2-c5xyNM81cC6XNXkYF0f8T2W9N-3tFaHFU-yt_ZXcxwyTQ1LWDSuFuY4TcUAzIncaPDcx00GC4xW3SReE https://lh5.googleusercontent.com/proxy/jTEM5HlQsKt0XoIJkt4OUmn2Iamp9nYfSSW-prrckD5zUh7QNR2gdZZy8rjMFo_GU9nGlc_i-ukU_eGY2GArIPAlx8ThA1k6njdldtkFnV4xkKtNHFh9ysG3Y6j6PNzsCMW78o0tw4fucvpVkt3SrBxRNOBncdFKD2ycEnR_V7tVxCNjYr6tRtluX1tbGQaBDbAZVUZ6gQcD6mW7sSc85OI9115MB6QNkr1osOfw0MVPN5Hir7U https://lh6.googleusercontent.com/proxy/Og3Td2DlG4lc7mQUU4pmQE6gehrqf0zf_g3Tw-trd6HvIZkWGTjnwE2JbAmDFUhT_mlOX1bDA6uAmCWGL-ZjL5JTElNOYniyWNU094OtO0EXGiidivmHobJFc3bJEBCekfpL2O7eizSbD7N3lVQ1nsxoUnpYNFjnaO6AvUbDqqrNfiroV8QnXBh3A2RCTamkv7W0p2c5u71ZtO7w2yHw4Ube89KmWtHsMv_qrgkhU96kEzij_WA https://lh3.googleusercontent.com/proxy/xaU9-2bS6BXUb2JhpjSQQbk89IMLWZtta6hAY0Ur0H2DhjtEIKQIDmAqbkcLKTiwj9O9-xMhBrib6WR-efj9oeDJOsHiyRClFBcmrlqOIhQpid2fmRMHR5OrvMZtIjBzNovjiBqrOkFpLuD9Fk7jwd3SYC9AXAaCT8UBug6AO2T2crW3NrKn-M0W6xl-drMQVmifdNkLU1nK0jGf3PLiTYF0szCwvKDXgO9kVZYP5VNFlub9EPY https://lh3.googleusercontent.com/proxy/_gEmWothhCfDJP8Ze3_y47557HzXOF5__6HHuJHzn56lv_Z4ObaAD_mu1CvQ5X1CdD_TKNoI4SbD5Qisd8DTntu2y9GtuFx-yLc2mEp7GrCRmmNtPxpsUvtXs7aVRKYn_fiLaDz9tSSBB5PwUd1pKdlRKvWOcZ9Jh2HXIBffOhPpTocmk_Lbxh16mroruCb43XYuqNG58OjQOSeW1voV0F_gllrVgLW-brvyHDFAzMSvxi88mU0</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          102.5127405,5.9036066,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pejabat Urusan KEMAHANGcare</name>
+      <styleUrl>#icon-1502-FF5252-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.1282555,5.8216443,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>BBNGO 12 Ubat</name>
+      <styleUrl>#icon-1502-FF5252-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.2853783,6.100351,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bachok district police headquarters</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.3968026,6.0532253,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>District Police Headquarters Gua Musang</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          101.9539789,4.864435,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ibu Pejabat Polis Daerah Jeli</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          101.8413094,5.697966,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ibu Pejabat Polis Daerah Kota Bharu</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.2888493,6.1565891,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ibu Pejabat Polis Daerah Kuala Krai</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.1972651,5.530672,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ibu Pejabat Polis Daerah Kota Bharu</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.2888493,6.1565891,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>District Police Headquarters Pasir Mas</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.1426549,6.046499,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>District Police Headquarters Pasir Puteh</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.4034796,5.8359459,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>District Police Headquarters Tanah Merah</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.146404,5.8093286,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>IPD Tumpat</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.1690515,6.1990333,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ibu Pejabat Polis Kontinjen Kelantan（IPK）</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.2449383,6.1226828,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Fire and Rescue Department Malaysia Kelantan</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.2324217,6.0728779,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Malaysian Civil Defense Force, Kota Bahru Branch</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.235862,6.0784303,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bilik Gerakan Negeri Kelantan</name>
+      <description><![CDATA[1	Bilik Gerakan Angkatan Pertahanan Awam Negeri Kelantan	097479798<br>2	Bilik Gerakan IPD Bachok	0<br>3	Bilik Gerakan IPD Gua Musang	0<br>4	Bilik Gerakan IPD Jeli	0<br>5	Bilik Gerakan IPD Kota Bharu	0<br>6	Bilik Gerakan IPD Kuala Krai	0<br>7	Bilik Gerakan IPD Machang	0<br>8	Bilik Gerakan IPD Pasir Mas	0<br>9	Bilik Gerakan IPD Pasir Puteh	0<br>10	Bilik Gerakan IPD Tanah Merah	0<br>11	Bilik Gerakan IPD Tumpat	0<br>12	Bilik Gerakan IPK Kelantan	097450999<br>13	Bilik Gerakan Jabatan Bomba dan Penyelamat Negeri Kelantan	097435135<br>14	Bilik Gerakan Jabatan Kebajikan Masyarakat Negeri Kelantan	097416925<br>15	Bilik Gerakan Jabatan Kerjaraya Negeri Kelantan	097470106<br>16	Bilik Gerakan Jabatan Kesihatan Negeri Kelantan	097652233<br>17	Bilik Gerakan Jabatan Pengairan dan Saliran Negeri Kelantan	097476624<br>18	Bilik Gerakan PBSM Negeri Kelantan	097435504<br>19	Bilik Gerakan Tentera Darat Malaysia,Markas 8 Briged	<br>20	Pusat Kawalan Operasi Banjir Jajahan Bachok	097788963<br>21	Pusat Kawalan Operasi Banjir Jajahan Gua Musang	099121228<br>22	Pusat Kawalan Operasi Banjir Jajahan Jeli	099440064<br>23	Pusat Kawalan Operasi Banjir Jajahan Kota Bharu	097482263<br>24	Pusat Kawalan Operasi Banjir Jajahan Kuala Krai	099666393<br>25	Pusat Kawalan Operasi Banjir Jajahan Machang	099755975<br>26	Pusat Kawalan Operasi Banjir Jajahan Pasir Mas	097917717<br>27	Pusat Kawalan Operasi Banjir Jajahan Pasir Puteh	097861444<br>28	Pusat Kawalan Operasi Banjir Jajahan Tanah Merah	099544114<br>29	Pusat Kawalan Operasi Banjir Jajahan Tumpat	097252244<br>30	Pusat Kawalan Operasi Banjir Negeri Kelantan	097481180]]></description>
+      <styleUrl>#icon-1656-673AB7</styleUrl>
+      <Point>
+        <coordinates>
+          102.2394549,6.1117737,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>JKR Kota Bharu</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.2425705,6.110494,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Jabatan Kesihatan Negeri Kelantan</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.2463802,6.1225171,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ibu Pejabat Negeri Bulan Sabit Merah Malaysia Negeri Kelantan</name>
+      <styleUrl>#icon-1656-673AB7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          102.24129,6.121758,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

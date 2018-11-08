@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Kobo</name>
+    <Style id="icon-1501-FFEA00-normal">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1501-FFEA00-highlight">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1501-FFEA00">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1501-FFEA00-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1501-FFEA00-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Gunung Stong</name>
+      <description><![CDATA[A01_Peta: 5.341301 101.930922 0 0<br>_A01_Peta_latitude: 5.341301<br>_A01_Peta_longitude: 101.930922<br>C01/perludipindahk: TRUE<br>C01/tenang: FALSE<br>C01/kecoh: TRUE<br>C01/imapkmaksima: TRUE<br>C01/impaksederhana: FALSE<br>C01/perlumedic: FALSE<br>C01/kawalansosial: FALSE<br>C01/possementara: FALSE<br>C01/airbersih: FALSE<br>C01/jalanutama: FALSE<br>C01/infra: FALSE<br>C01/FR: FALSE<br>C01/pegawai: FALSE<br>C01/telefon: FALSE<br>C01/internet: FALSE<br>C01/tidakpencemran: FALSE<br>C01/airkekal: FALSE<br>C01/airnaik: FALSE<br>C01/perlubot: FALSE<br>C01/perlu4wd: FALSE<br>C01/perlumakananme: FALSE<br>C01/perlumakanadim: FALSE<br>C01/adadapur: FALSE<br>D01/rosakbangunan: TRUE<br>D01/jalantenggelam: FALSE<br>D01/jambatanrosak: FALSE<br>D01/binaankayu: FALSE<br>D01/binaanbata: FALSE<br>D01/binaancampuran: TRUE<br>D01/rumah: FALSE<br>D01/kedaikilang: TRUE<br>D01/bangunantinggi: TRUE<br>D01/setingkat: FALSE<br>D01/lebihsetingkat: FALSE<br>D01/tenggelamrosak: FALSE<br>D01/berpenghuni: FALSE<br>D01/larikebukit: FALSE<br>D01/penduduktidakd: TRUE<br>D01/laporanoranghi: TRUE<br>D01/lemas: FALSE<br>D01/jalanalternati: FALSE<br>D01/tidak4wd: TRUE<br>Contact_Person: n/a<br>F02_PIC02: n/a<br>J01/rumahkurang5: FALSE<br>J01/rumah10: TRUE]]></description>
+      <styleUrl>#icon-1501-FFEA00</styleUrl>
+      <ExtendedData>
+        <Data name="A01_Peta">
+          <value>5.341301 101.930922 0 0</value>
+        </Data>
+        <Data name="_A01_Peta_latitude">
+          <value>5.341301</value>
+        </Data>
+        <Data name="_A01_Peta_longitude">
+          <value>101.930922</value>
+        </Data>
+        <Data name="C01/perludipindahk">
+          <value>TRUE</value>
+        </Data>
+        <Data name="C01/tenang">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/kecoh">
+          <value>TRUE</value>
+        </Data>
+        <Data name="C01/imapkmaksima">
+          <value>TRUE</value>
+        </Data>
+        <Data name="C01/impaksederhana">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/perlumedic">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/kawalansosial">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/possementara">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/airbersih">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/jalanutama">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/infra">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/FR">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/pegawai">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/telefon">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/internet">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/tidakpencemran">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/airkekal">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/airnaik">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/perlubot">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/perlu4wd">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/perlumakananme">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/perlumakanadim">
+          <value>FALSE</value>
+        </Data>
+        <Data name="C01/adadapur">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/rosakbangunan">
+          <value>TRUE</value>
+        </Data>
+        <Data name="D01/jalantenggelam">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/jambatanrosak">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/binaankayu">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/binaanbata">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/binaancampuran">
+          <value>TRUE</value>
+        </Data>
+        <Data name="D01/rumah">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/kedaikilang">
+          <value>TRUE</value>
+        </Data>
+        <Data name="D01/bangunantinggi">
+          <value>TRUE</value>
+        </Data>
+        <Data name="D01/setingkat">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/lebihsetingkat">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/tenggelamrosak">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/berpenghuni">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/larikebukit">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/penduduktidakd">
+          <value>TRUE</value>
+        </Data>
+        <Data name="D01/laporanoranghi">
+          <value>TRUE</value>
+        </Data>
+        <Data name="D01/lemas">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/jalanalternati">
+          <value>FALSE</value>
+        </Data>
+        <Data name="D01/tidak4wd">
+          <value>TRUE</value>
+        </Data>
+        <Data name="Contact_Person">
+          <value>n/a</value>
+        </Data>
+        <Data name="F02_PIC02">
+          <value>n/a</value>
+        </Data>
+        <Data name="J01/rumahkurang5">
+          <value>FALSE</value>
+        </Data>
+        <Data name="J01/rumah10">
+          <value>TRUE</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          101.930922,5.341301,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
