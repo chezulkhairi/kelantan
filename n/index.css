@@ -1,0 +1,72 @@
+
+html, body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#map {
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+input {
+    width: calc(100% - 6em);
+}
+
+#viz {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#circle {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+#sun-dir {
+    stroke: #aaa;
+    stroke-width: 7px;
+}
+
+#sun-pos {
+    stroke: orange;
+    stroke-width: 7px;
+}
+#sunrise {
+    stroke: yellow;
+    stroke-width: 4px;
+}
+#sunset {
+    stroke: #f73;
+    stroke-width: 4px;
+}
+
+#sun, #eye, #sunset-icon, #sunrise-icon {
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#sun {
+    stroke: orange;
+    fill: yellow;
+}
+
+#sunrise-icon, #sunset-icon {
+    fill: none;
+    stroke: #777;
+}
+
+#eye {
+    stroke: black;
+    fill: white;
+}
