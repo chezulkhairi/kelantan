@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>KoboPusatPemindahan</name>
+    <Style id="icon-1499-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1499-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1499-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1499-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1499-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>pp sekolah</name>
+      <description><![CDATA[A00_Pelapor: nama<br>A01_LaporanUmum: banjir<br>A03_PetaLokasi: 5.341045 101.937177 0 0<br>_A03_PetaLokasi_latitude: 5.341045<br>_A03_PetaLokasi_longitude: 101.937177<br>B00/B00_header: n/a<br>B00/B11_JumKeluarga: 5<br>B00/B12_JumMangsa: 10<br>B00/B13_LelakiDewasa: 25<br>B00/B14_LelakiKanak: 10<br>B00/B15_PerempDewasa: 10<br>B00/B16_PerempKanak: n/a<br>B00/Tarikh: 5<br>D00/D00_header: n/a<br>D00/KesesuaianPP: skalarendah<br>D00/KemudahanAkses: skalarendah<br>D00/RisikoTenggelam: skalatinggi<br>D00/Tikus: skalatinggi<br>D00/Infrastruktur: skalarendah<br>C00/C00_header: n/a<br>C00/Kesesakan: skalatinggi<br>C00/Ruang: skalarendah<br>C00/Makanan: skalarendah<br>C00/AirBersih: skalatinggi<br>C00/RuangSolat: skalarendah<br>C00/Kesihatan: skalarendah<br>C00/Privasi: skalarendah<br>C00/Bayi: skalatinggi<br>C00/PWDOrangTua: skalarendah<br>C00/Pregnant: skalarendah<br>__version__: vYUDysRM8cB2G4f96sP72N<br>meta/instanceID: uuid:b63fd40b-a8a2-4392-9893-0cbe18adf898<br>_uuid: b63fd40b-a8a2-4392-9893-0cbe18adf898<br>_submission_time: 2018-10-15T14:59:20<br>_tags: <br>_notes: ]]></description>
+      <styleUrl>#icon-1499-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="A00_Pelapor">
+          <value>nama</value>
+        </Data>
+        <Data name="A01_LaporanUmum">
+          <value>banjir</value>
+        </Data>
+        <Data name="A03_PetaLokasi">
+          <value>5.341045 101.937177 0 0</value>
+        </Data>
+        <Data name="_A03_PetaLokasi_latitude">
+          <value>5.341045</value>
+        </Data>
+        <Data name="_A03_PetaLokasi_longitude">
+          <value>101.937177</value>
+        </Data>
+        <Data name="B00/B00_header">
+          <value>n/a</value>
+        </Data>
+        <Data name="B00/B11_JumKeluarga">
+          <value>5.0</value>
+        </Data>
+        <Data name="B00/B12_JumMangsa">
+          <value>10.0</value>
+        </Data>
+        <Data name="B00/B13_LelakiDewasa">
+          <value>25.0</value>
+        </Data>
+        <Data name="B00/B14_LelakiKanak">
+          <value>10.0</value>
+        </Data>
+        <Data name="B00/B15_PerempDewasa">
+          <value>10.0</value>
+        </Data>
+        <Data name="B00/B16_PerempKanak">
+          <value>n/a</value>
+        </Data>
+        <Data name="B00/Tarikh">
+          <value>5.0</value>
+        </Data>
+        <Data name="D00/D00_header">
+          <value>n/a</value>
+        </Data>
+        <Data name="D00/KesesuaianPP">
+          <value>skalarendah</value>
+        </Data>
+        <Data name="D00/KemudahanAkses">
+          <value>skalarendah</value>
+        </Data>
+        <Data name="D00/RisikoTenggelam">
+          <value>skalatinggi</value>
+        </Data>
+        <Data name="D00/Tikus">
+          <value>skalatinggi</value>
+        </Data>
+        <Data name="D00/Infrastruktur">
+          <value>skalarendah</value>
+        </Data>
+        <Data name="C00/C00_header">
+          <value>n/a</value>
+        </Data>
+        <Data name="C00/Kesesakan">
+          <value>skalatinggi</value>
+        </Data>
+        <Data name="C00/Ruang">
+          <value>skalarendah</value>
+        </Data>
+        <Data name="C00/Makanan">
+          <value>skalarendah</value>
+        </Data>
+        <Data name="C00/AirBersih">
+          <value>skalatinggi</value>
+        </Data>
+        <Data name="C00/RuangSolat">
+          <value>skalarendah</value>
+        </Data>
+        <Data name="C00/Kesihatan">
+          <value>skalarendah</value>
+        </Data>
+        <Data name="C00/Privasi">
+          <value>skalarendah</value>
+        </Data>
+        <Data name="C00/Bayi">
+          <value>skalatinggi</value>
+        </Data>
+        <Data name="C00/PWDOrangTua">
+          <value>skalarendah</value>
+        </Data>
+        <Data name="C00/Pregnant">
+          <value>skalarendah</value>
+        </Data>
+        <Data name="__version__">
+          <value>vYUDysRM8cB2G4f96sP72N</value>
+        </Data>
+        <Data name="meta/instanceID">
+          <value>uuid:b63fd40b-a8a2-4392-9893-0cbe18adf898</value>
+        </Data>
+        <Data name="_uuid">
+          <value>b63fd40b-a8a2-4392-9893-0cbe18adf898</value>
+        </Data>
+        <Data name="_submission_time">
+          <value>2018-10-15T14:59:20</value>
+        </Data>
+        <Data name="_tags">
+          <value/>
+        </Data>
+        <Data name="_notes">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          101.937177,5.341045,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

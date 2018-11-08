@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Laluan Overflow Air Banjir</name>
+    <Style id="line-673AB7-2000-normal">
+      <LineStyle>
+        <color>ffb73a67</color>
+        <width>2</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-673AB7-2000-highlight">
+      <LineStyle>
+        <color>ffb73a67</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-673AB7-2000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-673AB7-2000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-673AB7-2000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-9C27B0-2000-normal">
+      <LineStyle>
+        <color>ffb0279c</color>
+        <width>2</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-9C27B0-2000-highlight">
+      <LineStyle>
+        <color>ffb0279c</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-9C27B0-2000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-9C27B0-2000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-9C27B0-2000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Laluan Takung Simpanan Limpahan Banjir Stong</name>
+      <description>Laluan Takung Simpanan Limpahan Banjir Stong</description>
+      <styleUrl>#line-9C27B0-2000</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          101.048549,5.315116,0
+          101.209145,5.43,0
+          101.357289,5.492117,0
+          101.706029,5.623102,0
+          101.830902,5.424617,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Laluan Limpahan air Empangan</name>
+      <description>Laluan Limpahan air Empangan</description>
+      <styleUrl>#line-673AB7-2000</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          101.048549,5.315116,0
+          101.208801,5.476566,0
+          101.387329,5.558582,0
+          101.642761,5.624186,0
+          101.843262,5.796362,0
+          102.082214,6.118708,0
+          102.395325,6.304379,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>

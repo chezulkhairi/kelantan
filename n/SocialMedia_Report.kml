@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>SocialMedia_Report</name>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Pekan Gerik 04Oct 2018</name>
+      <description><![CDATA[<img src="https://lh6.googleusercontent.com/proxy/4JBN1zQfT8X5D63OlERY55qvReIVL2A_OjAug0tSJxSjpj29VHSES6kHUYgTjYsV3jJffRYGcxj-hhBteGEpv3bq8T5lVcqfIkq5lrTajy1TZuHRG8ZTde3oUZf1uKJx979aOlkHr04F4Io2ZePDyUWdcmh8QovwspZL5oyjpvKGoYRBTQy6CSQke1N8cD0ZskwA73oFyVDqn1c5eDGaD-W1QQbEHlEXWqBS_sahacXAA4QYjAI_AU1D" height="200" width="auto" /><br><br>description: <br><br>IPOH, Oct 4 (Bernama) -- Thirteen people from several villages near Gerik were evacuated to flood relief centres because of rising waters in the areas due to heavy rain earlier this morning.<br><br>Gerik Fire and Rescue Station chief Azizul Aswad Asaris said six victims were evacuated to the relief centre at Kampung Padang Kunyit, five to Kampung Ulu Kenorong while one victim was sent to Pekan Gerik and another to Kampung Bendang Kerajaan.<br><br>"The Fire and Rescue Department received a call that there were flash floods at 6.52am before moving the victims out from the villages to safety," he said when contacted here today.<br><br>According to the State Disaster Management Committee Secretariat, seven villages in Gerik were affected by the flash floods which included Kampung Air Panas, Kampung Batu Hampar, Kampung Kolam Air, Kampung Ulu Kenderong, Kampung Tanjung Kala, Kampung Padang Kunyit and Kampung Padang.<br>Date: 04/10/2018<br>Location: -<br>Source: -<br>Impact: -<br>Risk: -<br>Statistic: -<br>Displaced: -<br>Economic Loss: -<br>FloodDepth: -<br>InfrastructureLossDamage: -]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value><![CDATA[
+
+IPOH, Oct 4 (Bernama) -- Thirteen people from several villages near Gerik were evacuated to flood relief centres because of rising waters in the areas due to heavy rain earlier this morning.
+
+Gerik Fire and Rescue Station chief Azizul Aswad Asaris said six victims were evacuated to the relief centre at Kampung Padang Kunyit, five to Kampung Ulu Kenorong while one victim was sent to Pekan Gerik and another to Kampung Bendang Kerajaan.
+
+"The Fire and Rescue Department received a call that there were flash floods at 6.52am before moving the victims out from the villages to safety," he said when contacted here today.
+
+According to the State Disaster Management Committee Secretariat, seven villages in Gerik were affected by the flash floods which included Kampung Air Panas, Kampung Batu Hampar, Kampung Kolam Air, Kampung Ulu Kenderong, Kampung Tanjung Kala, Kampung Padang Kunyit and Kampung Padang.]]></value>
+        </Data>
+        <Data name="Date">
+          <value>04/10/2018</value>
+        </Data>
+        <Data name="Location">
+          <value>-</value>
+        </Data>
+        <Data name="Source">
+          <value>-</value>
+        </Data>
+        <Data name="Impact">
+          <value>-</value>
+        </Data>
+        <Data name="Risk">
+          <value>-</value>
+        </Data>
+        <Data name="Statistic">
+          <value>-</value>
+        </Data>
+        <Data name="Displaced">
+          <value>-</value>
+        </Data>
+        <Data name="Economic Loss">
+          <value>-</value>
+        </Data>
+        <Data name="FloodDepth">
+          <value>-</value>
+        </Data>
+        <Data name="InfrastructureLossDamage">
+          <value>-</value>
+        </Data>
+        <Data name="gx_media_links">
+          <value>https://lh6.googleusercontent.com/proxy/4JBN1zQfT8X5D63OlERY55qvReIVL2A_OjAug0tSJxSjpj29VHSES6kHUYgTjYsV3jJffRYGcxj-hhBteGEpv3bq8T5lVcqfIkq5lrTajy1TZuHRG8ZTde3oUZf1uKJx979aOlkHr04F4Io2ZePDyUWdcmh8QovwspZL5oyjpvKGoYRBTQy6CSQke1N8cD0ZskwA73oFyVDqn1c5eDGaD-W1QQbEHlEXWqBS_sahacXAA4QYjAI_AU1D</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          101.128473,5.430094,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Betong 04Oct2018</name>
+      <description><![CDATA[<img src="https://lh4.googleusercontent.com/proxy/ta-xl5-Iu3ms3X9nYElFmH-mryVAZ1KOcr27bkQkAPk6y9qiagoRjtsSgVIgTLsUa_8P-6qdSKUcMCdJDrnaDhk2dCHm-J1J6hKrVNirErakzNsGYWKfgHPd62xDY7r8QpC81R5M6T5LCbPsd0821MUNoShhzZttD7LbPp-3-mwvdZIeRPmjGxHwXTDRQ4kbY1CTdo2mhwWbIkEFhUxmU9ISCxicrMdMSMVDBXOYWKnPZtkXKAaluEHVB7s" height="200" width="auto" /><br><br>description: <br><br><br>Date: 04/10/2018<br>Location: -<br>Source: -<br>Impact: -<br>Risk: -<br>Statistic: -<br>Displaced: -<br>Economic Loss: -<br>FloodDepth: -<br>InfrastructureLossDamage: -]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value>
+
+</value>
+        </Data>
+        <Data name="Date">
+          <value>04/10/2018</value>
+        </Data>
+        <Data name="Location">
+          <value>-</value>
+        </Data>
+        <Data name="Source">
+          <value>-</value>
+        </Data>
+        <Data name="Impact">
+          <value>-</value>
+        </Data>
+        <Data name="Risk">
+          <value>-</value>
+        </Data>
+        <Data name="Statistic">
+          <value>-</value>
+        </Data>
+        <Data name="Displaced">
+          <value>-</value>
+        </Data>
+        <Data name="Economic Loss">
+          <value>-</value>
+        </Data>
+        <Data name="FloodDepth">
+          <value>-</value>
+        </Data>
+        <Data name="InfrastructureLossDamage">
+          <value>-</value>
+        </Data>
+        <Data name="gx_media_links">
+          <value>https://lh4.googleusercontent.com/proxy/ta-xl5-Iu3ms3X9nYElFmH-mryVAZ1KOcr27bkQkAPk6y9qiagoRjtsSgVIgTLsUa_8P-6qdSKUcMCdJDrnaDhk2dCHm-J1J6hKrVNirErakzNsGYWKfgHPd62xDY7r8QpC81R5M6T5LCbPsd0821MUNoShhzZttD7LbPp-3-mwvdZIeRPmjGxHwXTDRQ4kbY1CTdo2mhwWbIkEFhUxmU9ISCxicrMdMSMVDBXOYWKnPZtkXKAaluEHVB7s</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          101.073722,5.779484,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perhentian Islands (Sea Level Monitoring Station)</name>
+      <description><![CDATA[<img src="https://lh4.googleusercontent.com/proxy/WV4qxLa1wAd07d5Cojwh572Vx5c" height="200" width="auto" /><br><br>description: http://www.ioc-sealevelmonitoring.org/station.php?code=ms004 (http://www.ioc-sealevelmonitoring.org/station.php?code=ms004 ) http://www.ioc-sealevelmonitoring.org/monitor.php?codes[]=ms004&period=0.5<br>Date: -<br>Location: -<br>Source: -<br>Impact: -<br>Risk: -<br>Statistic: -<br>Displaced: -<br>Economic Loss: -<br>FloodDepth: -<br>InfrastructureLossDamage: -]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value><![CDATA[http://www.ioc-sealevelmonitoring.org/station.php?code=ms004 (http://www.ioc-sealevelmonitoring.org/station.php?code=ms004 ) http://www.ioc-sealevelmonitoring.org/monitor.php?codes[]=ms004&period=0.5]]></value>
+        </Data>
+        <Data name="Date">
+          <value>-</value>
+        </Data>
+        <Data name="Location">
+          <value>-</value>
+        </Data>
+        <Data name="Source">
+          <value>-</value>
+        </Data>
+        <Data name="Impact">
+          <value>-</value>
+        </Data>
+        <Data name="Risk">
+          <value>-</value>
+        </Data>
+        <Data name="Statistic">
+          <value>-</value>
+        </Data>
+        <Data name="Displaced">
+          <value>-</value>
+        </Data>
+        <Data name="Economic Loss">
+          <value>-</value>
+        </Data>
+        <Data name="FloodDepth">
+          <value>-</value>
+        </Data>
+        <Data name="InfrastructureLossDamage">
+          <value>-</value>
+        </Data>
+        <Data name="gx_media_links">
+          <value>https://lh4.googleusercontent.com/proxy/WV4qxLa1wAd07d5Cojwh572Vx5c</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          102.745121,5.909496,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kampung Kerinting 07Oct2018 5.44pm</name>
+      <description><![CDATA[<img src="https://lh5.googleusercontent.com/proxy/2nq3LX-65KIUW4vQuv0hURXfVDtUg790-1TMB_iSXQ2GhlRvHhGan-ZNCh8zifQrWPzohyFV760Me3bSmkSZXBbYHMUwRMlQSx1oH8jhQI6bT6N93OPl-D4kwp_qPsh5IESx_KXazmrOGX-CwOWAFYzkQBIDFRUw5IjpBqyORExOvHiT8KJbOrcqDg3B8JloTvpTxsgkY8zcBUeNIx_QPrTODvQ5X8j8joQT6_Exy5DNjsBzm9eTZIiedK6y" height="200" width="auto" /><br><br>description: <br><br><br>Date: 07/10/2018<br>Location: -<br>Source: -<br>Impact: -<br>Risk: -<br>Statistic: -<br>Displaced: -<br>Economic Loss: -<br>FloodDepth: -<br>InfrastructureLossDamage: -]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value>
+
+</value>
+        </Data>
+        <Data name="Date">
+          <value>07/10/2018</value>
+        </Data>
+        <Data name="Location">
+          <value>-</value>
+        </Data>
+        <Data name="Source">
+          <value>-</value>
+        </Data>
+        <Data name="Impact">
+          <value>-</value>
+        </Data>
+        <Data name="Risk">
+          <value>-</value>
+        </Data>
+        <Data name="Statistic">
+          <value>-</value>
+        </Data>
+        <Data name="Displaced">
+          <value>-</value>
+        </Data>
+        <Data name="Economic Loss">
+          <value>-</value>
+        </Data>
+        <Data name="FloodDepth">
+          <value>-</value>
+        </Data>
+        <Data name="InfrastructureLossDamage">
+          <value>-</value>
+        </Data>
+        <Data name="gx_media_links">
+          <value>https://lh5.googleusercontent.com/proxy/2nq3LX-65KIUW4vQuv0hURXfVDtUg790-1TMB_iSXQ2GhlRvHhGan-ZNCh8zifQrWPzohyFV760Me3bSmkSZXBbYHMUwRMlQSx1oH8jhQI6bT6N93OPl-D4kwp_qPsh5IESx_KXazmrOGX-CwOWAFYzkQBIDFRUw5IjpBqyORExOvHiT8KJbOrcqDg3B8JloTvpTxsgkY8zcBUeNIx_QPrTODvQ5X8j8joQT6_Exy5DNjsBzm9eTZIiedK6y</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          101.961198,4.878664,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
