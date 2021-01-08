@@ -1,0 +1,1 @@
+laporan_geojson_callback({"type":"FeatureCollection","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"Name":null,"Tarikh":"01\/01\/2021","Lokasi":"Testing","Mangsa":"20","Keperluan":"Makanan"},"geometry":{"type":"Point","coordinates":[102.23064,5.24066]}}]});
